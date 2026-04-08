@@ -43,14 +43,14 @@ function setRegion(region, el) {
 function updatePrices() {
   if (currentRegion === 'india') {
     document.getElementById('in-s-price').textContent = isYearly ? '₹1,990' : '₹199';
-    document.getElementById('in-s-period').textContent = isYearly ? '/year' : '/month';
+    document.getElementById('in-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
     document.getElementById('in-p-price').textContent = isYearly ? '₹4,990' : '₹499';
-    document.getElementById('in-p-period').textContent = isYearly ? '/year' : '/month';
+    document.getElementById('in-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
   } else {
     document.getElementById('gl-s-price').textContent = isYearly ? '$90' : '$9';
-    document.getElementById('gl-s-period').textContent = isYearly ? '/year' : '/month';
+    document.getElementById('gl-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
     document.getElementById('gl-p-price').textContent = isYearly ? '$190' : '$19';
-    document.getElementById('gl-p-period').textContent = isYearly ? '/year' : '/month';
+    document.getElementById('gl-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
   }
 }
 
