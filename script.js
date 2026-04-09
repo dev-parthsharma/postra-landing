@@ -76,7 +76,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 // ===== GOOGLE SHEETS ENDPOINT =====
-const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyeYQLXgD7-f8D3xhHwEp7_j4Llzf8uML38B6-sm_OYMBctBBmVcvWrLR8PosdmJXL4WA/exec';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzNV8P3eQPHyp9SHGTD5wl-curtAHSZ6H7quVI0ohQddheLgISAWAJfEaUb7UvLsJidOQ/exec';
 
 async function submitModal() {
   const name = document.getElementById('modal-name').value.trim();
