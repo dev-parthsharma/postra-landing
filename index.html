@@ -67,7 +67,7 @@
     <a onclick="showPage('about')" id="nav-about">About</a>
     <a onclick="showPage('blog')" id="nav-blog">Blog</a>
     <a onclick="showPage('contact')" id="nav-contact">Contact</a>
-    <a onclick="openModal()" class="nav-cta">Start Free →</a>
+    <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="nav-cta">Start Free →</a>
   </div>
   <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 </nav>
@@ -95,7 +95,7 @@
     <h1>Stop Overthinking.<br>Start <span class="accent">Posting.</span></h1>
     <p class="hero-sub">Postra guides you from idea to published post — with AI generating scripts, captions, hashtags, and posting schedules. No blank screen. No overwhelm.</p>
     <div class="hero-actions">
-      <a onclick="openModal()" class="btn btn-primary btn-lg">Start for Free →</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-primary btn-lg">Start for Free →</a>
       <a onclick="showPage('features')" class="btn btn-outline btn-lg">See How It Works</a>
     </div>
     <div class="hero-proof">
@@ -307,7 +307,7 @@
     <h2 class="section-title">Simple, fair pricing.</h2>
     <p class="section-subtitle">Start free. Upgrade when you're ready. No confusing tiers, no hidden fees.</p>
     <div style="text-align:center; margin-top:24px;">
-      <a onclick="openModal()" class="btn btn-primary btn-lg">Get Early Access →</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-primary btn-lg">Get Early Access →</a>
     </div>
   </section>
 
@@ -347,7 +347,7 @@
   <div class="cta-band">
     <h2>Your next post is waiting.</h2>
     <p>Stop staring at the blank screen. Let Postra turn your idea into a post — right now.</p>
-    <a onclick="openModal()" class="btn btn-white btn-lg">Start Free Today →</a>
+    <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-white btn-lg">Start Free Today →</a>
   </div>
 
 </div><!-- /page-home -->
@@ -399,7 +399,7 @@
         <li><span class="check">✓</span> 1 saved workflow</li>
         <li><span class="check">✓</span> 1 regenerate per step</li>
       </ul>
-      <a onclick="openModal()" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
     </div>
 
     <div class="price-card featured">
@@ -421,7 +421,7 @@
         <li><span class="check">✓</span> Music suggestions</li>
         <li><span class="check">✓</span> AI-driven content calendar</li>
       </ul>
-      <a onclick="openModal()" class="btn btn-primary" style="width:100%;justify-content:center;">Start Pro →</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-primary" style="width:100%;justify-content:center;">Start Pro →</a>
     </div>
   </div>
 </div>
@@ -445,7 +445,7 @@
         <li><span class="check">✓</span> 1 saved workflow</li>
         <li><span class="check">✓</span> 1 regenerate per step</li>
       </ul>
-      <a onclick="openModal()" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
     </div>
 
     <div class="price-card featured">
@@ -467,7 +467,7 @@
         <li><span class="check">✓</span> Music suggestions</li>
         <li><span class="check">✓</span> AI-driven content calendar</li>
       </ul>
-      <a onclick="openModal()" class="btn btn-primary" style="width:100%;justify-content:center;">Start Pro →</a>
+      <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-primary" style="width:100%;justify-content:center;">Start Pro →</a>
     </div>
   </div>
 </div>
@@ -727,7 +727,7 @@
   <div class="cta-band">
     <h2>See it for yourself.</h2>
     <p>Start your first post with Postra right now — no credit card needed.</p>
-    <a onclick="openModal()" class="btn btn-white btn-lg">Start Free →</a>
+    <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-white btn-lg">Start Free →</a>
   </div>
 </div><!-- /page-features -->
 
@@ -1267,7 +1267,7 @@
   <div class="cta-band">
     <h2>Ready to take control of your content?</h2>
     <p>Start your Postra account and post your first AI-assisted reel today.</p>
-    <a onclick="openModal()" class="btn btn-white btn-lg">Get Started Free →</a>
+    <a onclick="window.location.href='https://your-frontend-url.vercel.app'" class="btn btn-white btn-lg">Get Started Free →</a>
   </div>
 </div><!-- /page-dashboard -->
 
@@ -1329,32 +1329,3 @@
     <button onclick="document.getElementById('setupBanner').style.display='none'" style="background:none;border:none;color:#64748b;cursor:pointer;font-size:18px;flex-shrink:0;padding:0;">×</button>
   </div>
 </div>
-
-<!-- ===== EARLY ACCESS MODAL ===== -->
-<div class="modal-overlay" id="earlyAccessModal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <div id="modal-form">
-      <div style="font-size:32px; margin-bottom:12px;">🚀</div>
-      <h2 class="modal-title">Join Postra Early</h2>
-      <p class="modal-sub">Get early access before the public launch. We'll reach out to you first.</p>
-      <div class="modal-error" id="modal-error">Please fill in all fields to continue.</div>
-      <div class="form-group">
-        <label class="form-label">Your Name</label>
-        <input type="text" class="form-input" id="modal-name" placeholder="e.g. Riya Shah">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Instagram ID</label>
-        <input type="text" class="form-input" id="modal-ig" placeholder="e.g. @yourusername">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Your Niche</label>
-        <input type="text" class="form-input" id="modal-niche" placeholder="e.g. Fitness, Finance, Travel...">
-      </div>
-      <button class="btn btn-primary" id="modal-submit-btn" style="width:100%;justify-content:center;margin-top:4px;" onclick="submitModal()">Get Access →</button>
-      <p style="text-align:center;font-size:12px;color:var(--ink-4);margin-top:14px;">No spam. No credit card. Just early access.</p>
-    </div>
-    <div class="modal-success" id="modal-success">
-      <div class="success-icon">🎉</div>
-      <h3>You're on the list!</h3>
-      <p>We'll reach out to <strong>@<span id="modal-ig-confirm"></span></strong> soon with your early access d
