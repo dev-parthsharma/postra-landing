@@ -1,5 +1,5 @@
 // ===== PAGE ROUTING =====
-const pages = ['home','pricing','about','features','blog','privacy','cookies','terms','contact','dashboard', 'careers', 'press'];
+const pages = ['home','pricing','about','features','blog','privacy','cookies','terms','contact','dashboard','careers','press'];
 
 function showPage(id) {
   pages.forEach(p => {
@@ -8,7 +8,9 @@ function showPage(id) {
     if (el) el.classList.toggle('active', p === id);
     if (nav) nav.classList.toggle('active', p === id);
   });
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Re-trigger scroll reveals on page change
+  setTimeout(initReveal, 100);
 }
 
 // ===== MOBILE MENU =====
@@ -27,7 +29,28 @@ function toggleFaq(btn) {
   if (!isOpen) { answer.classList.add('open'); icon.classList.add('open'); }
 }
 
-// ===== REGION TOGGLE (Manual - India default) =====
+// ===== OUTPUT PREVIEW TABS =====
+function switchTab(btn, tabId) {
+  // Deactivate all tabs and contents
+  document.querySelectorAll('.otab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.otab-content').forEach(c => c.classList.remove('active'));
+  // Activate selected
+  btn.classList.add('active');
+  const tab = document.getElementById(tabId);
+  if (tab) {
+    tab.classList.add('active');
+    // Animate in
+    tab.style.opacity = '0';
+    tab.style.transform = 'translateY(8px)';
+    requestAnimationFrame(() => {
+      tab.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      tab.style.opacity = '1';
+      tab.style.transform = 'translateY(0)';
+    });
+  }
+}
+
+// ===== REGION TOGGLE =====
 let currentRegion = 'india';
 let isYearly = false;
 
@@ -42,19 +65,19 @@ function setRegion(region, el) {
 
 function updatePrices() {
   if (currentRegion === 'india') {
-    document.getElementById('in-s-price').textContent = isYearly ? '₹1,990' : '₹199';
+    document.getElementById('in-s-price').textContent = isYearly ? '₹1,490' : '₹149';
     document.getElementById('in-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-    document.getElementById('in-p-price').textContent = isYearly ? '₹4,990' : '₹499';
+    document.getElementById('in-p-price').textContent = isYearly ? '₹3,990' : '₹399';
     document.getElementById('in-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
   } else {
-    document.getElementById('gl-s-price').textContent = isYearly ? '$90' : '$9';
+    document.getElementById('gl-s-price').textContent = isYearly ? '$70' : '$7';
     document.getElementById('gl-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-    document.getElementById('gl-p-price').textContent = isYearly ? '$190' : '$19';
+    document.getElementById('gl-p-price').textContent = isYearly ? '$150' : '$15';
     document.getElementById('gl-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
   }
 }
 
-// ===== BILLING TOGGLE (Monthly / Yearly) =====
+// ===== BILLING TOGGLE =====
 function toggleBilling() {
   isYearly = !isYearly;
   const btn = document.getElementById('billingToggle');
@@ -65,68 +88,6 @@ function toggleBilling() {
   tYearly.classList.toggle('active', isYearly);
   updatePrices();
 }
-
-// ===== MODAL =====
-function openModal() {
-  document.getElementById('earlyAccessModal').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('earlyAccessModal').style.display = 'none';
-  document.body.style.overflow = '';
-}
-// ===== GOOGLE SHEETS ENDPOINT =====
-const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzNV8P3eQPHyp9SHGTD5wl-curtAHSZ6H7quVI0ohQddheLgISAWAJfEaUb7UvLsJidOQ/exec';
-
-async function submitModal() {
-  const name = document.getElementById('modal-name').value.trim();
-  const ig = document.getElementById('modal-ig').value.trim();
-  const niche = document.getElementById('modal-niche').value.trim();
-  const errorEl = document.getElementById('modal-error');
-  const submitBtn = document.getElementById('modal-submit-btn');
-
-  if (!name || !ig || !niche) {
-    errorEl.textContent = 'Please fill in all fields to continue.';
-    errorEl.style.display = 'block';
-    return;
-  }
-  errorEl.style.display = 'none';
-
-  // Show loading state
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Saving...';
-
-  const igClean = ig.replace('@','');
-  const timestamp = new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'});
-
-  try {
-    if (SHEETS_URL && SHEETS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-      await fetch(SHEETS_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, ig: igClean, niche, timestamp, source: 'postra-landing' })
-      });
-    }
-    // Show success regardless (no-cors means we can't read response)
-    document.getElementById('modal-ig-confirm').textContent = igClean;
-    document.getElementById('modal-form').style.display = 'none';
-    document.getElementById('modal-success').style.display = 'block';
-  } catch(err) {
-    // Still show success to user — data may have gone through
-    document.getElementById('modal-ig-confirm').textContent = igClean;
-    document.getElementById('modal-form').style.display = 'none';
-    document.getElementById('modal-success').style.display = 'block';
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Get Access →';
-  }
-}
-// Close modal on overlay click
-document.addEventListener('click', function(e) {
-  const modal = document.getElementById('earlyAccessModal');
-  if (e.target === modal) closeModal();
-});
 
 // ===== BLOG FILTER =====
 function filterBlog(cat, btn) {
@@ -144,15 +105,99 @@ function filterBlog(cat, btn) {
 // ===== CONTACT FORM =====
 function submitContact() {
   const success = document.getElementById('contactSuccess');
-  success.style.display = 'block';
-  setTimeout(() => { success.style.display = 'none'; }, 4000);
+  if (success) {
+    success.style.display = 'block';
+    setTimeout(() => { success.style.display = 'none'; }, 4000);
+  }
 }
+
+// ===== COUNTER ANIMATION =====
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const duration = 1800;
+  const start = performance.now();
+
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    // Format with + suffix
+    if (target >= 1000) {
+      el.textContent = (current >= 1000 ? Math.floor(current / 1000) + ',' + String(current % 1000).padStart(3, '0') : current) + '+';
+    } else {
+      el.textContent = current + '+';
+    }
+    if (progress < 1) requestAnimationFrame(update);
+    else {
+      if (target >= 1000) {
+        el.textContent = Math.floor(target / 1000).toLocaleString() + ',000+';
+      } else {
+        el.textContent = target + '+';
+      }
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+// ===== SCROLL REVEAL =====
+function initReveal() {
+  const revealEls = document.querySelectorAll('.page.active .reveal:not(.revealed)');
+  if (!revealEls.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => observer.observe(el));
+}
+
+// ===== COUNTER INTERSECTION OBSERVER =====
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.animated) {
+        entry.target.dataset.animated = 'true';
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(el => observer.observe(el));
+}
+
+// ===== STICKY NAV SHADOW =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  if (nav) {
+    nav.style.boxShadow = window.scrollY > 10
+      ? '0 2px 16px rgba(0,0,0,0.08)'
+      : 'none';
+  }
+});
+
+// ===== GOOGLE SHEETS ENDPOINT =====
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzNV8P3eQPHyp9SHGTD5wl-curtAHSZ6H7quVI0ohQddheLgISAWAJfEaUb7UvLsJidOQ/exec';
 
 // ===== INIT =====
-updatePrices();
+document.addEventListener('DOMContentLoaded', () => {
+  updatePrices();
+  initReveal();
+  initCounters();
+});
 
-// Show dev banner if Sheets not connected
-if (SHEETS_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-  const banner = document.getElementById('setupBanner');
-  if (banner) banner.style.display = 'block';
-}
+// Also init after a short delay to catch above-the-fold elements
+setTimeout(() => {
+  initReveal();
+  initCounters();
+}, 200);
