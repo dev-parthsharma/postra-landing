@@ -50,44 +50,8 @@ function switchTab(btn, tabId) {
   }
 }
 
-// ===== REGION TOGGLE =====
-let currentRegion = 'india';
-let isYearly = false;
-
-function setRegion(region, el) {
-  currentRegion = region;
-  document.getElementById('india-pricing').style.display = region === 'india' ? 'block' : 'none';
-  document.getElementById('global-pricing').style.display = region === 'global' ? 'block' : 'none';
-  document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
-  updatePrices();
-}
-
-function updatePrices() {
-  if (currentRegion === 'india') {
-    document.getElementById('in-s-price').textContent = isYearly ? '₹1,490' : '₹149';
-    document.getElementById('in-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-    document.getElementById('in-p-price').textContent = isYearly ? '₹3,990' : '₹399';
-    document.getElementById('in-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-  } else {
-    document.getElementById('gl-s-price').textContent = isYearly ? '$70' : '$7';
-    document.getElementById('gl-s-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-    document.getElementById('gl-p-price').textContent = isYearly ? '$150' : '$15';
-    document.getElementById('gl-p-period').textContent = isYearly ? '/year (Save 2 months)' : '/month';
-  }
-}
-
-// ===== BILLING TOGGLE =====
-function toggleBilling() {
-  isYearly = !isYearly;
-  const btn = document.getElementById('billingToggle');
-  const tMonthly = document.getElementById('t-monthly');
-  const tYearly = document.getElementById('t-yearly');
-  btn.classList.toggle('yearly', isYearly);
-  tMonthly.classList.toggle('active', !isYearly);
-  tYearly.classList.toggle('active', isYearly);
-  updatePrices();
-}
+// ===== PRICING — static, no toggles needed =====
+// Plans: Free ₹0 / Starter ₹199 / Pro ₹399 (India only)
 
 // ===== BLOG FILTER =====
 function filterBlog(cat, btn) {
@@ -191,7 +155,6 @@ const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzNV8P3eQPHyp9SHGTD5
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-  updatePrices();
   initReveal();
   initCounters();
 });
