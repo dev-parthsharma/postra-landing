@@ -172,17 +172,17 @@
   <!-- ===== SOCIAL PROOF TICKER ===== -->
   <div class="proof-ticker">
     <div class="ticker-track">
-      <span>✅ @fitnesswithsneha just posted</span>
-      <span>✅ @businesstipsbyrahul — 4 posts this week</span>
-      <span>✅ @studywithpriya kept her streak — 14 days straight!</span>
-      <span>✅ @foodiedelhi generated 3 ideas in under 2 minutes</span>
-      <span>✅ @startupstoriesind — posting every single day</span>
+      <span>✅ @fitakshit just posted</span>
+      <span>✅ @themidboys — 4 posts this week</span>
+      <span>✅ @studywithkomal kept her streak — 14 days straight!</span>
+      <span>✅ @satyamsharma generated 3 ideas in under 2 minutes</span>
+      <span>✅ @chauhanbakery — posting every single day</span>
       <span>✅ @techwitharjun copied the caption and hit post ✨</span>
-      <span>✅ @fitnesswithsneha just posted</span>
-      <span>✅ @businesstipsbyrahul — 4 posts this week</span>
-      <span>✅ @studywithpriya kept her streak — 14 days straight!</span>
-      <span>✅ @foodiedelhi generated 3 ideas in under 2 minutes</span>
-      <span>✅ @startupstoriesind — posting every single day</span>
+      <span>✅ @fitakshit just posted</span>
+      <span>✅ @themidboys — 4 posts this week</span>
+      <span>✅ @studywithkomal kept her streak — 14 days straight!</span>
+      <span>✅ @satyamsharma generated 3 ideas in under 2 minutes</span>
+      <span>✅ @chauhanbakery — posting every single day</span>
       <span>✅ @techwitharjun copied the caption and hit post ✨</span>
     </div>
   </div>
@@ -441,7 +441,7 @@
         </div>
       </div>
       <p class="pricing-note-small">💡 One good reel earns more than this plan costs.</p>
-      <a onclick="showPage('pricing')" class="btn btn-outline" style="margin-top:16px;">View full pricing →</a>
+      <a onclick="showPage('pricing')" class="btn btn-outline" style="margin-top:16px;">View full pricing→</a>
     </div>
   </section>
 
@@ -452,7 +452,7 @@
     <div style="max-width:680px; margin:0 auto;" id="faq">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Kya Postra free hai? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes — there is free plan forever, no credit card required. Upgrade anytime.</div>
+        <div class="faq-a">Yes — 14-day free trial, no credit card required. Get full access to all features and see how it fits your workflow. Upgrade anytime.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Can Postra post directly to Instagram? <span class="faq-icon">+</span></button>
@@ -1229,5 +1229,104 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- ====================================================
+     FEEDBACK WIDGET — floating bottom-right
+===================================================== -->
+
+<!-- Trigger button -->
+<button class="fb-trigger" id="fbTrigger" onclick="toggleFeedback()" title="Share feedback or suggestion">
+  <span class="fb-trigger-icon">💬</span>
+  <span class="fb-trigger-label">Feedback</span>
+</button>
+
+<!-- Widget panel -->
+<div class="fb-panel" id="fbPanel">
+  <div class="fb-panel-header">
+    <div class="fb-header-left">
+      <div class="fb-avatar">P</div>
+      <div>
+        <div class="fb-header-name">Parth — Founder</div>
+        <div class="fb-header-sub">Reads every message personally</div>
+      </div>
+    </div>
+    <button class="fb-close" onclick="toggleFeedback()" title="Close">✕</button>
+  </div>
+
+  <!-- Prompt text -->
+  <div class="fb-prompt">
+    <p>Something caught your eye? Have a suggestion?<br>
+    <strong>Tell me directly — text or voice.</strong></p>
+  </div>
+
+  <!-- Mode selector -->
+  <div class="fb-modes" id="fbModes">
+    <button class="fb-mode-btn active" id="modeTextBtn" onclick="switchMode('text')">
+      ✍️ Write
+    </button>
+    <button class="fb-mode-btn" id="modeVoiceBtn" onclick="switchMode('voice')">
+      🎙️ Voice note
+    </button>
+  </div>
+
+  <!-- TEXT mode -->
+  <div class="fb-body" id="fbTextBody">
+    <textarea
+      id="fbTextarea"
+      class="fb-textarea"
+      placeholder="e.g. The pricing section felt confusing, or I loved the output preview demo..."
+      rows="4"
+    ></textarea>
+    <div class="fb-actions">
+      <input type="email" id="fbEmail" class="fb-email" placeholder="Your email (optional)">
+      <button class="btn btn-primary fb-submit-btn" onclick="submitFeedback()">
+        Send →
+      </button>
+    </div>
+  </div>
+
+  <!-- VOICE mode -->
+  <div class="fb-body" id="fbVoiceBody" style="display:none;">
+    <div class="fb-voice-area" id="fbVoiceArea">
+      <div class="fb-voice-idle" id="fbVoiceIdle">
+        <button class="fb-record-btn" id="fbRecordBtn" onclick="startRecording()">
+          <span class="fb-mic-icon">🎙️</span>
+        </button>
+        <p class="fb-voice-hint">Tap to start recording</p>
+      </div>
+      <div class="fb-voice-recording" id="fbVoiceRecording" style="display:none;">
+        <div class="fb-recording-pulse">
+          <span class="fb-rec-dot"></span>
+          <span class="fb-rec-label">Recording...</span>
+          <span id="fbTimer">0:00</span>
+        </div>
+        <button class="btn btn-outline fb-stop-btn" onclick="stopRecording()">Stop</button>
+      </div>
+      <div class="fb-voice-done" id="fbVoiceDone" style="display:none;">
+        <div class="fb-playback">
+          <span class="fb-play-icon">🎵</span>
+          <audio id="fbAudio" controls style="width:100%;border-radius:8px;"></audio>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button class="btn btn-outline" style="flex:1;font-size:13px;" onclick="retakeRecording()">Re-record</button>
+          <button class="btn btn-primary" style="flex:1;font-size:13px;" onclick="submitVoiceFeedback()">Send voice note →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success state -->
+  <div class="fb-success" id="fbSuccess" style="display:none;">
+    <div class="fb-success-icon">🙏</div>
+    <h4>Thank you!</h4>
+    <p>Got your message. I read every single one and use them to make Postra better.</p>
+    <p class="fb-success-sig">— Parth</p>
+  </div>
+
+</div>
+
+<!-- Dark overlay on mobile -->
+<div class="fb-overlay" id="fbOverlay" onclick="toggleFeedback()"></div>
+
 </body>
 </html>
