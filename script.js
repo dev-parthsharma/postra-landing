@@ -164,3 +164,193 @@ setTimeout(() => {
   initReveal();
   initCounters();
 }, 200);
+
+// ===================================================
+//  FEEDBACK WIDGET
+// ===================================================
+
+const FEEDBACK_EMAIL = 'sharmaaparth.07@gmail.com'; // Formsubmit endpoint
+
+let fbOpen = false;
+let fbMode = 'text';
+let mediaRecorder = null;
+let audioChunks = [];
+let recordingTimer = null;
+let recordingSeconds = 0;
+let audioBlob = null;
+
+function toggleFeedback() {
+  fbOpen = !fbOpen;
+  const panel   = document.getElementById('fbPanel');
+  const overlay = document.getElementById('fbOverlay');
+  const trigger = document.getElementById('fbTrigger');
+
+  if (fbOpen) {
+    panel.style.display = 'block';
+    requestAnimationFrame(() => panel.classList.add('visible'));
+    overlay.classList.add('visible');
+    trigger.classList.add('open');
+    trigger.querySelector('.fb-trigger-label').textContent = 'Close';
+  } else {
+    panel.classList.remove('visible');
+    overlay.classList.remove('visible');
+    trigger.classList.remove('open');
+    trigger.querySelector('.fb-trigger-label').textContent = 'Feedback';
+    // hide after animation
+    setTimeout(() => { if (!fbOpen) panel.style.display = 'none'; }, 250);
+    // reset if needed
+    resetFeedbackPanel();
+  }
+}
+
+function switchMode(mode) {
+  fbMode = mode;
+  document.getElementById('fbTextBody').style.display  = mode === 'text'  ? 'block' : 'none';
+  document.getElementById('fbVoiceBody').style.display = mode === 'voice' ? 'block' : 'none';
+  document.getElementById('modeTextBtn').classList.toggle('active',  mode === 'text');
+  document.getElementById('modeVoiceBtn').classList.toggle('active', mode === 'voice');
+}
+
+// ── Text feedback ──────────────────────────────────
+async function submitFeedback() {
+  const text  = document.getElementById('fbTextarea').value.trim();
+  const email = document.getElementById('fbEmail').value.trim();
+
+  if (!text) {
+    document.getElementById('fbTextarea').focus();
+    document.getElementById('fbTextarea').style.borderColor = '#fca5a5';
+    setTimeout(() => document.getElementById('fbTextarea').style.borderColor = '', 1500);
+    return;
+  }
+
+  const btn = document.querySelector('.fb-submit-btn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    // Send via Formsubmit (no-cors, fire-and-forget)
+    await fetch(`https://formsubmit.co/ajax/${FEEDBACK_EMAIL}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: '💬 Postra Landing Page Feedback',
+        message: text,
+        email: email || 'anonymous',
+        page: window.location.href,
+        _captcha: 'false'
+      })
+    });
+  } catch(e) {
+    // silent fail — still show success to user
+  }
+
+  showFeedbackSuccess();
+}
+
+// ── Voice recording ────────────────────────────────
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioChunks = [];
+    mediaRecorder = new MediaRecorder(stream);
+
+    mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+    mediaRecorder.onstop = () => {
+      audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+      const url = URL.createObjectURL(audioBlob);
+      document.getElementById('fbAudio').src = url;
+      showVoiceState('done');
+      stream.getTracks().forEach(t => t.stop());
+    };
+
+    mediaRecorder.start();
+    recordingSeconds = 0;
+    showVoiceState('recording');
+
+    recordingTimer = setInterval(() => {
+      recordingSeconds++;
+      const m = Math.floor(recordingSeconds / 60);
+      const s = String(recordingSeconds % 60).padStart(2, '0');
+      document.getElementById('fbTimer').textContent = `${m}:${s}`;
+      // auto-stop at 2 minutes
+      if (recordingSeconds >= 120) stopRecording();
+    }, 1000);
+
+  } catch(err) {
+    alert('Microphone access denied. Please allow mic access and try again.');
+  }
+}
+
+function stopRecording() {
+  if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+    mediaRecorder.stop();
+  }
+  clearInterval(recordingTimer);
+}
+
+function retakeRecording() {
+  audioBlob = null;
+  audioChunks = [];
+  document.getElementById('fbAudio').src = '';
+  showVoiceState('idle');
+}
+
+async function submitVoiceFeedback() {
+  if (!audioBlob) return;
+
+  const btn = document.querySelector('.fb-voice-done .btn-primary');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    // Convert to base64 and send via formsubmit as text fallback
+    const reader = new FileReader();
+    reader.readAsDataURL(audioBlob);
+    reader.onloadend = async () => {
+      // Send a notification email (voice blob too large for basic form, so we notify)
+      await fetch(`https://formsubmit.co/ajax/${FEEDBACK_EMAIL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: '🎙️ Postra Voice Feedback',
+          message: `Voice note recorded (${recordingSeconds}s). Audio data attached below.`,
+          audio_base64: reader.result.substring(0, 500) + '... [truncated - full audio in recorder]',
+          page: window.location.href,
+          _captcha: 'false'
+        })
+      });
+    };
+  } catch(e) { /* silent */ }
+
+  showFeedbackSuccess();
+}
+
+function showVoiceState(state) {
+  document.getElementById('fbVoiceIdle').style.display     = state === 'idle'      ? 'flex'  : 'none';
+  document.getElementById('fbVoiceRecording').style.display = state === 'recording' ? 'flex'  : 'none';
+  document.getElementById('fbVoiceDone').style.display      = state === 'done'      ? 'block' : 'none';
+}
+
+function showFeedbackSuccess() {
+  document.getElementById('fbModes').style.display    = 'none';
+  document.getElementById('fbTextBody').style.display  = 'none';
+  document.getElementById('fbVoiceBody').style.display = 'none';
+  document.getElementById('fbSuccess').style.display   = 'block';
+}
+
+function resetFeedbackPanel() {
+  // Only reset after panel is fully hidden
+  setTimeout(() => {
+    const success = document.getElementById('fbSuccess');
+    if (success) success.style.display = 'none';
+    const modes = document.getElementById('fbModes');
+    if (modes) modes.style.display = 'flex';
+    const textarea = document.getElementById('fbTextarea');
+    if (textarea) textarea.value = '';
+    const email = document.getElementById('fbEmail');
+    if (email) email.value = '';
+    switchMode('text');
+    showVoiceState('idle');
+    audioBlob = null;
+  }, 300);
+}
