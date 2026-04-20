@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postra — Never Run Out of Content Again.</title>
+  <title>Terms & Conditions — Postra</title>
   <meta name="description" content="Postra helps Instagram creators generate niche-specific ideas, captions, and ready-to-post content in seconds. Never run out of content again.">
   <meta name="keywords" content="AI social media tool, content generator, Instagram creator tools, caption generator, Hindi content creator tool">
   <meta name="author" content="Postra">
@@ -28,10 +28,40 @@
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo" onclick="showPage('home')" style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+    <img src="assets/postra.png" alt="Postra logo" style="height:44px;width:auto;display:block;filter:invert(30%) sepia(90%) saturate(600%) hue-rotate(200deg) brightness(80%);">
+    <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--brand);letter-spacing:-0.03em;">Postra</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+    <a onclick="showPage('features')" id="nav-features">Features</a>
+    <a onclick="showPage('pricing')" id="nav-pricing">Pricing</a>
+    <a onclick="showPage('about')" id="nav-about">About</a>
+    <a onclick="showPage('blog')" id="nav-blog">Blog</a>
+    <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+    <a onclick="window.location.href='https://postra-five.vercel.app/'" class="nav-cta pulse-cta">Start Free →</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" style="display:none; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px;">
+  <a onclick="showPage('home');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Home</a>
+  <a onclick="showPage('features');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Features</a>
+  <a onclick="showPage('pricing');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Pricing</a>
+  <a onclick="showPage('about');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">About</a>
+  <a onclick="showPage('blog');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Blog</a>
+  <a onclick="showPage('contact');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Contact</a>
+  <a onclick="window.location.href='https://postra-five.vercel.app/';toggleMobileMenu()" style="display:block;margin-top:8px;padding:12px;text-align:center;background:var(--brand);color:#fff;border-radius:8px;font-weight:700;cursor:pointer;">Generate 3 Free Ideas →</a>
+</div>
+
 <!-- ====================================================
     PAGE: TERMS
 ===================================================== -->
-<div class="page" id="page-terms">
+<div class="page active" id="page-terms">
   <div class="page-hero">
     <p class="label">Legal</p>
     <h1>Terms & Conditions</h1>
@@ -58,5 +88,51 @@
     </div>
   </section>
 </div>
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand" style="display:flex;align-items:center;gap:8px;">
+        <img src="assets/postra.png" alt="" style="height:44px;width:auto;filter:brightness(0) invert(1) opacity(0.9);">
+        <span>Postra</span>
+      </div>
+      <p class="footer-tagline">The AI-powered content system for Instagram creators. Go from idea to post — without the overwhelm.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+        <a href="https://instagram.com/buildwithprth" target="_blank" style="color:#94a3b8; font-size:22px; text-decoration:none;" title="@buildwithprth"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=sharmaaparth.07@email.com&su=Business Inquiry - Postra&body=Hi Postra Support, ." target="_blank" style="color:#94a3b8; font-size:22px; text-decoration:none;" title="sharmaaparth.07@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a onclick="showPage('features')">Features</a>
+      <a onclick="showPage('pricing')">Pricing</a>
+      <a onclick="showPage('dashboard')">Dashboard Preview</a>
+      <a onclick="showPage('blog')">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a onclick="showPage('about')">About Postra</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a href="#" onclick="showPage('careers'); return false;">Careers</a>
+      <a href="#" onclick="showPage('press'); return false;">Press</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacypolicy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
+      <a onclick="showPage('cookies')">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Postra. All rights reserved. Built with ❤️ by Parth Sharma.</p>
+    <p style="font-size:13px;">Made for creators, by a creator.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
