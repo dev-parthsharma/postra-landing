@@ -1211,3 +1211,202 @@ footer {
   .fb-trigger { bottom: 16px; right: 16px; padding: 11px 16px; font-size: 13px; }
   .fb-panel { bottom: 72px; right: 16px; left: 16px; width: auto; }
 }
+/* ===== HOW IT WORKS SECTION ===== */
+.hiw-section { background: #fff; }
+
+.hiw-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hiw-step {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 24px 0;
+}
+
+.hiw-step-icon-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hiw-step-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.hiw-step:hover .hiw-step-icon {
+  background: var(--brand-light);
+  border-color: var(--brand);
+}
+
+.hiw-step-num {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.hiw-step-content {
+  padding-top: 8px;
+}
+
+.hiw-step-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.hiw-step-content p {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+.hiw-connector {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--border-2), var(--border));
+  margin-left: 27px;
+  flex-shrink: 0;
+}
+
+.hiw-step-final .hiw-step-icon {
+  background: var(--brand-light);
+  border-color: var(--brand);
+}
+
+.hiw-icon-final .hiw-step-icon {
+  background: linear-gradient(135deg, var(--brand-light) 0%, #e0eaff 100%);
+  border-color: var(--brand);
+}
+
+.hiw-time-compare {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 48px;
+  padding: 24px 32px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.htc-before { color: var(--ink-3); }
+.htc-arrow { color: var(--brand); font-size: 20px; }
+.htc-after { color: var(--success); }
+
+@media (max-width: 640px) {
+  .hiw-step { gap: 16px; }
+  .hiw-step-content h4 { font-size: 16px; }
+  .hiw-step-content p { font-size: 14px; }
+  .hiw-time-compare { flex-direction: column; text-align: center; padding: 20px; }
+  .htc-arrow { transform: rotate(90deg); }
+}
+
+/* ===== HERO PREVIEW — SCRIPT TAB ===== */
+.script-block {
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  transition: all 0.15s;
+}
+.script-block.selected-script {
+  border-color: var(--brand);
+  background: var(--brand-light);
+}
+.script-scene-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin-bottom: 5px;
+}
+.script-scene-text {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ===== HERO PREVIEW — SHOOT GUIDE TAB ===== */
+.shoot-guide-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  transition: all 0.15s;
+}
+.shoot-guide-item.selected-shoot {
+  border-color: var(--brand);
+  background: var(--brand-light);
+}
+.shoot-scene-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  color: var(--ink-3);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.shoot-guide-item.selected-shoot .shoot-scene-num {
+  background: var(--brand);
+  color: #fff;
+}
+.shoot-scene-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.shoot-scene-detail {
+  font-size: 12px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
