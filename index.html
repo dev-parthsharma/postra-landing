@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postra — Never Run Out of Content Again.</title>
-  <meta name="description" content="Postra helps Instagram creators generate niche-specific ideas, captions, and ready-to-post content in seconds. Never run out of content again.">
-  <meta name="keywords" content="AI social media tool, content generator, Instagram creator tools, caption generator, Hindi content creator tool">
+  <title>Postra — Idea to Published Reel in One Flow.</title>
+  <meta name="description" content="Postra takes you from idea → script → shooting guide → editing guide → published Instagram reel. One flow, no manual headache.">
+  <meta name="keywords" content="AI Instagram reel creator, content workflow tool, Instagram creator tools, reel script generator, caption generator, Instagram publishing tool">
   <meta name="author" content="Postra">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Postra — Never Run Out of Content Again.">
-  <meta property="og:description" content="Idea → Ready post in seconds. Built for Instagram creators who want to stay consistent without the overthink.">
+  <meta property="og:title" content="Postra — From Idea to Published Reel in One Flow.">
+  <meta property="og:description" content="Script → Shoot → Edit → Publish. Postra handles every step so you can post consistently without the mental load.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://postra-gamma.vercel.app/">
   <meta property="og:image" content="https://postra-gamma.vercel.app/assets/postra.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Postra — Never Run Out of Content Again.">
-  <meta name="twitter:description" content="Never run out of content again. Generate niche ideas + captions in seconds.">
+  <meta name="twitter:title" content="Postra — From Idea to Published Reel in One Flow.">
+  <meta name="twitter:description" content="Stop managing content manually. Postra gives you the full workflow — idea to Instagram — in minutes.">
   <meta name="twitter:image" content="https://postra-gamma.vercel.app/assets/postra.png">
   <link rel="icon" href="assets/postra.png" type="image/png">
   <link rel="canonical" href="https://postra-gamma.vercel.app/">
@@ -54,7 +54,7 @@
   <a onclick="showPage('about');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">About</a>
   <a onclick="showPage('blog');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Blog</a>
   <a onclick="showPage('contact');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Contact</a>
-  <a onclick="window.location.href='https://postra-five.vercel.app/';toggleMobileMenu()" style="display:block;margin-top:8px;padding:12px;text-align:center;background:var(--brand);color:#fff;border-radius:8px;font-weight:700;cursor:pointer;">Generate 3 Free Ideas →</a>
+  <a onclick="window.location.href='https://postra-five.vercel.app/';toggleMobileMenu()" style="display:block;margin-top:8px;padding:12px;text-align:center;background:var(--brand);color:#fff;border-radius:8px;font-weight:700;cursor:pointer;">Start Your First Reel Free →</a>
 </div>
 
 
@@ -65,48 +65,49 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <!-- Animated BG blobs -->
     <div class="hero-blob hero-blob-1"></div>
     <div class="hero-blob hero-blob-2"></div>
 
     <div class="hero-inner">
       <div class="hero-badge">
         <span class="dot"></span>
-        <span>1,000+ creators posting consistently</span>
+        <span>2,000+ creators publishing consistently</span>
       </div>
 
       <h1 class="hero-headline">
-        Never run out of<br>
-        <span class="accent">content ideas again.</span>
+        From idea to<br>
+        <span class="accent">published reel</span> — in one flow.
       </h1>
 
       <p class="hero-sub">
-        Enter your niche — Postra instantly generates <strong>3 ready ideas, captions, and hooks</strong> tailored to your audience.
-        No blank screen. No overthinking. Just post.
+        Postra gives you the <strong>full workflow</strong> — idea, hook, script, shooting guide, editing guide, and direct Instagram publishing.
+        No switching apps. No blank screens. Just post.
       </p>
 
       <div class="hero-actions">
         <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-primary btn-lg btn-glow">
-          <span>✨</span> Generate 3 Free Ideas — Now
+          <span>🚀</span> Start Your First Reel Free
         </a>
-        <a onclick="showPage('features')" class="btn btn-outline btn-lg">See How It Works →</a>
+        <a onclick="showPage('features')" class="btn btn-outline btn-lg">See the Full Workflow →</a>
       </div>
 
       <div class="hero-microtrust">
         <span class="trust-pill">🔒 No credit card</span>
-        <span class="trust-pill">⚡ Instant output</span>
-        <span class="trust-pill">🚫 No spam</span>
+        <span class="trust-pill">⚡ Full workflow in minutes</span>
+        <span class="trust-pill">📲 Publish directly to Instagram</span>
       </div>
 
       <!-- OUTPUT PREVIEW CARD -->
       <div class="hero-output-preview">
-        <div class="output-preview-label">✨ Sample output — this is what you get in seconds</div>
+        <div class="output-preview-label">✨ Your complete reel workflow — here's what you get in minutes</div>
         <div class="output-tabs">
           <button class="otab active" onclick="switchTab(this,'tab-idea')">💡 Idea</button>
+          <button class="otab" onclick="switchTab(this,'tab-script')">📝 Script</button>
+          <button class="otab" onclick="switchTab(this,'tab-shoot')">🎬 Shoot Guide</button>
           <button class="otab" onclick="switchTab(this,'tab-caption')">✍️ Caption</button>
-          <button class="otab" onclick="switchTab(this,'tab-hook')">🪝 Hook</button>
         </div>
         <div class="output-body">
+
           <div class="otab-content active" id="tab-idea">
             <div class="output-niche-tag">📍 Niche: Fitness</div>
             <div class="output-item selected">
@@ -133,11 +134,54 @@
             </div>
           </div>
 
+          <div class="otab-content" id="tab-script">
+            <div class="output-niche-tag">📍 Fitness · Idea #1 · Script</div>
+            <div class="script-block">
+              <div class="script-scene-label">🪝 Hook (0–3s)</div>
+              <div class="script-scene-text">«I wasted 6 months at the gym because nobody told me these 3 things…»</div>
+            </div>
+            <div class="script-block">
+              <div class="script-scene-label">📣 Point 1 (3–12s)</div>
+              <div class="script-scene-text">«Mistake one — training without a plan. Every session was random. No progression, no results.»</div>
+            </div>
+            <div class="script-block selected-script">
+              <div class="script-scene-label">📣 Point 2 (12–22s)</div>
+              <div class="script-scene-text">«Mistake two — skipping the warm-up. I got injured twice. Both were 100% avoidable.»</div>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--ink-3);">+ 2 more scenes included · 45-second reel · Conversational tone</div>
+          </div>
+
+          <div class="otab-content" id="tab-shoot">
+            <div class="output-niche-tag">📍 Fitness · Shooting Guide</div>
+            <div class="shoot-guide-item">
+              <div class="shoot-scene-num">1</div>
+              <div>
+                <div class="shoot-scene-title">Hook shot — Face to camera</div>
+                <div class="shoot-scene-detail">Natural window light, slight low angle, steady. Speak directly into the lens.</div>
+              </div>
+            </div>
+            <div class="shoot-guide-item">
+              <div class="shoot-scene-num">2</div>
+              <div>
+                <div class="shoot-scene-title">B-roll — Gym walkthrough</div>
+                <div class="shoot-scene-detail">Quick 0.5s cuts of equipment. Move the phone slowly. No shaky cam.</div>
+              </div>
+            </div>
+            <div class="shoot-guide-item selected-shoot">
+              <div class="shoot-scene-num">3</div>
+              <div>
+                <div class="shoot-scene-title">CTA closeup</div>
+                <div class="shoot-scene-detail">Zoom in slightly, look into camera, speak slowly. End with a confident smirk.</div>
+              </div>
+            </div>
+            <div style="margin-top:8px; background:var(--success-light); border-radius:8px; padding:8px 12px; font-size:12px; color:var(--success);">✂️ Editing suggestion: lo-fi trap beat, fast cuts on Point 2, text overlays on each mistake</div>
+          </div>
+
           <div class="otab-content" id="tab-caption">
-            <div class="output-niche-tag">📍 Niche: Fitness · Idea #1</div>
+            <div class="output-niche-tag">📍 Fitness · Caption</div>
             <div class="caption-block">
               <div class="caption-label">Short caption</div>
-              <div class="caption-text">Stop making these 3 gym mistakes 🚫<br>Game-changing tips for beginners. Save this! 💪<br>#fitness #gymtips #beginners</div>
+              <div class="caption-text">Stop making these 3 gym mistakes 🚫<br>Game-changing for beginners. Save this! 💪<br>#fitness #gymtips #beginners</div>
             </div>
             <div class="caption-block selected-caption">
               <div class="caption-label">⭐ Best performing</div>
@@ -145,25 +189,10 @@
             </div>
           </div>
 
-          <div class="otab-content" id="tab-hook">
-            <div class="output-niche-tag">📍 Niche: Fitness · Hook generator</div>
-            <div class="hook-item">
-              <div class="hook-badge">🔥 Bold</div>
-              <div class="hook-text">"Still not seeing results after months at the gym? These 3 mistakes are why..."</div>
-            </div>
-            <div class="hook-item selected-hook">
-              <div class="hook-badge">⭐ Best</div>
-              <div class="hook-text">"I wasted 6 months at the gym — because nobody told me this one thing..."</div>
-            </div>
-            <div class="hook-item">
-              <div class="hook-badge">❓ Question</div>
-              <div class="hook-text">"Are you making these gym mistakes without even knowing it?"</div>
-            </div>
-          </div>
         </div>
         <div class="output-footer">
-          <span class="output-time">⚡ Generated in 3.2 seconds</span>
-          <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Try it for your niche →</a>
+          <span class="output-time">⚡ Full workflow in under 5 minutes · Publishes directly to Instagram</span>
+          <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Try it free →</a>
         </div>
       </div>
     </div>
@@ -172,18 +201,18 @@
   <!-- ===== SOCIAL PROOF TICKER ===== -->
   <div class="proof-ticker">
     <div class="ticker-track">
-      <span>✅ @fitakshit just posted</span>
-      <span>✅ @themidboys — 4 posts this week</span>
-      <span>✅ @studywithkomal kept her streak — 14 days straight!</span>
-      <span>✅ @satyamsharma generated 3 ideas in under 2 minutes</span>
-      <span>✅ @chauhanbakery — posting every single day</span>
-      <span>✅ @techwitharjun copied the caption and hit post ✨</span>
-      <span>✅ @fitakshit just posted</span>
-      <span>✅ @themidboys — 4 posts this week</span>
-      <span>✅ @studywithkomal kept her streak — 14 days straight!</span>
-      <span>✅ @satyamsharma generated 3 ideas in under 2 minutes</span>
-      <span>✅ @chauhanbakery — posting every single day</span>
-      <span>✅ @techwitharjun copied the caption and hit post ✨</span>
+      <span>🚀 @fitakshit just published a reel in 8 minutes</span>
+      <span>✅ @themidboys — 4 reels posted this week</span>
+      <span>🎬 @studywithkomal completed full workflow — 14 days straight</span>
+      <span>📲 @satyamsharma published directly from Postra in under 5 minutes</span>
+      <span>✅ @chauhanbakery — idea to posted, every single day</span>
+      <span>🔥 @techwitharjun used the shoot guide and tripled his views</span>
+      <span>🚀 @fitakshit just published a reel in 8 minutes</span>
+      <span>✅ @themidboys — 4 reels posted this week</span>
+      <span>🎬 @studywithkomal completed full workflow — 14 days straight</span>
+      <span>📲 @satyamsharma published directly from Postra in under 5 minutes</span>
+      <span>✅ @chauhanbakery — idea to posted, every single day</span>
+      <span>🔥 @techwitharjun used the shoot guide and tripled his views</span>
     </div>
   </div>
 
@@ -196,11 +225,11 @@
       </div>
       <div class="stat-item">
         <div class="stat-num counter" data-target="14000">0</div>
-        <div class="stat-label">Posts generated</div>
+        <div class="stat-label">Reels published</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">3 sec</div>
-        <div class="stat-label">Avg. idea generation</div>
+        <div class="stat-num">&lt; 5 min</div>
+        <div class="stat-label">Avg. full workflow time</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">4.9★</div>
@@ -209,173 +238,229 @@
     </div>
   </section>
 
-  <!-- ===== PROBLEM SECTION (Emotional) ===== -->
+  <!-- ===== PROBLEM SECTION ===== -->
   <section class="section problem-section">
     <div class="problem-inner">
       <div class="problem-copy">
         <p class="label">Sound Familiar?</p>
-        <h2 class="section-title">Why most creators quit before they grow</h2>
-        <p class="section-subtitle" style="margin-bottom:0;">It's not lack of talent. It's the process. Without a system, content creation drains you fast.</p>
+        <h2 class="section-title">The whole content workflow is broken — not just the ideas.</h2>
+        <p class="section-subtitle" style="margin-bottom:0;">Most creators don't quit because they lack talent. They quit because every single post involves too many separate steps, too many decisions, and too much mental energy.</p>
       </div>
       <div class="pain-cards">
         <div class="pain-card" data-delay="0">
           <div class="pain-emoji">😩</div>
           <div class="pain-text">
             <h4>"What do I even post today?"</h4>
-            <p>You open the camera, stare for 20 minutes, and close the app. Nothing came to mind.</p>
+            <p>You open the camera, stare for 20 minutes, and close the app. The idea just doesn't come.</p>
           </div>
         </div>
         <div class="pain-card" data-delay="100">
-          <div class="pain-emoji">📉</div>
+          <div class="pain-emoji">⏳</div>
           <div class="pain-text">
-            <h4>Inconsistency kills your growth</h4>
-            <p>Miss one week and the algorithm punishes you for months. Starting over feels impossible.</p>
+            <h4>Two hours for one post — really?</h4>
+            <p>Idea → hook → script → film → caption → hashtags → publish. Each step on its own is fine. Together, they drain you.</p>
           </div>
         </div>
         <div class="pain-card" data-delay="200">
-          <div class="pain-emoji">⏳</div>
+          <div class="pain-emoji">🎬</div>
           <div class="pain-text">
-            <h4>"Two hours for one post? Really?"</h4>
-            <p>Writing scripts, captions, finding hashtags — each step eats time you simply don't have.</p>
+            <h4>"I know what to say. I just don't know how to film it."</h4>
+            <p>No shoot plan, no editing direction. You end up with footage you're not sure how to use.</p>
           </div>
         </div>
         <div class="pain-card" data-delay="300">
-          <div class="pain-emoji">🔁</div>
+          <div class="pain-emoji">📉</div>
           <div class="pain-text">
-            <h4>Starting from scratch every single time</h4>
-            <p>No repeatable system. No muscle memory. Every post is a brand-new battle. Ab bas.</p>
+            <h4>You post once, then go quiet for weeks</h4>
+            <p>No system = no consistency. And the algorithm punishes inconsistency harder than anything else.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOLUTION SECTION ===== -->
-  <section class="section solution-section">
-    <div class="solution-inner">
-      <div style="text-align:center; max-width:680px; margin:0 auto 64px;">
-        <p class="label">The Fix</p>
-        <h2 class="section-title">Postra gives you a system, not just a tool.</h2>
-        <p class="section-subtitle" style="margin:0 auto;">Tell it your niche. Get niche-specific ideas, captions, hooks, and scripts — ready to use in seconds.</p>
-      </div>
-
-      <div class="solution-steps">
-        <div class="sol-step">
-          <div class="sol-step-num">1</div>
-          <div class="sol-step-icon">🎯</div>
-          <h4>Enter your niche</h4>
-          <p>Fitness, food, finance, travel — anything. Postra understands your space.</p>
-        </div>
-        <div class="sol-arrow">→</div>
-        <div class="sol-step">
-          <div class="sol-step-num">2</div>
-          <div class="sol-step-icon">⚡</div>
-          <h4>Get 3 ideas instantly</h4>
-          <p>Trending formats, high-engagement topics — tested and ready to go.</p>
-        </div>
-        <div class="sol-arrow">→</div>
-        <div class="sol-step">
-          <div class="sol-step-num">3</div>
-          <div class="sol-step-icon">🚀</div>
-          <h4>Caption, hook, hashtags — sab auto</h4>
-          <p>Copy, post, done. It really is that simple.</p>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:48px;">
-        <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-primary btn-lg btn-glow">
-          ✨ Try it free
-        </a>
-        <p style="font-size:13px;color:var(--ink-3);margin-top:12px;">generate your first 3 ideas without any payment</p>
-      </div>
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section hiw-section">
+    <div style="text-align:center; max-width:680px; margin:0 auto 64px;">
+      <p class="label">How It Works</p>
+      <h2 class="section-title">One flow. Idea to published reel.</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Every step connected. No switching apps. No starting from scratch every time.</p>
     </div>
-  </section>
 
-  <!-- ===== FLOW VISUAL ===== -->
-  <section class="section-sm flow-section">
-    <p class="label" style="text-align:center;display:block;">The Postra Workflow</p>
-    <h2 class="section-title" style="text-align:center;margin-bottom:8px;">From idea to posted — in minutes</h2>
-    <p style="color:var(--ink-3);font-size:16px;margin-bottom:0;text-align:center;">What used to take 2+ hours now takes under 5 minutes.</p>
-    <div class="flow-steps">
-      <div class="flow-step"><div class="flow-step-icon">💡</div><div class="flow-step-label">Idea</div><div class="flow-step-time">10 sec</div></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="flow-step-icon">🪝</div><div class="flow-step-label">Hook</div><div class="flow-step-time">30 sec</div></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="flow-step-icon">📝</div><div class="flow-step-label">Script</div><div class="flow-step-time">1 min</div></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="flow-step-icon">✍️</div><div class="flow-step-label">Caption</div><div class="flow-step-time">30 sec</div></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step flow-step-highlight"><div class="flow-step-icon">📸</div><div class="flow-step-label">Post!</div><div class="flow-step-time">Done ✅</div></div>
+    <div class="hiw-steps">
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">💡</div>
+          <div class="hiw-step-num">1</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Pick your idea</h4>
+          <p>Enter your niche — Postra generates 10 niche-specific, trending ideas. Pick the one that excites you.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">🪝</div>
+          <div class="hiw-step-num">2</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Choose your hook</h4>
+          <p>Get 3 hook variations — bold, question, story-opener. Your first 3 seconds are the most important. Pick the one that stops the scroll.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">📝</div>
+          <div class="hiw-step-num">3</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Get your full script</h4>
+          <p>Scene-by-scene script matched to your tone and niche. Word for word. Tweak it or use it exactly as written.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">📸</div>
+          <div class="hiw-step-num">4</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Follow the shooting guide</h4>
+          <p>Camera angles, lighting notes, scene-by-scene direction. Know exactly what to film before you press record.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">✂️</div>
+          <div class="hiw-step-num">5</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Edit with confidence</h4>
+          <p>Transitions, pacing, music suggestions, text overlay tips — tailored to your content type. No editing experience needed.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step">
+        <div class="hiw-step-icon-wrap">
+          <div class="hiw-step-icon">✍️</div>
+          <div class="hiw-step-num">6</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Auto caption + hashtags</h4>
+          <p>3 caption options, targeted hashtags, and the best time to post — all generated. Copy and move on.</p>
+        </div>
+      </div>
+
+      <div class="hiw-connector"></div>
+
+      <div class="hiw-step hiw-step-final">
+        <div class="hiw-step-icon-wrap hiw-icon-final">
+          <div class="hiw-step-icon">🚀</div>
+          <div class="hiw-step-num">7</div>
+        </div>
+        <div class="hiw-step-content">
+          <h4>Publish directly to Instagram</h4>
+          <p>Post or schedule with one click through the official Instagram API. No copy-pasting, no manual uploading.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="flow-compare">
-      <div class="flow-old">😫 Before: <strong>2+ hours</strong></div>
-      <div class="flow-vs">→</div>
-      <div class="flow-new">🚀 With Postra: <strong>under 5 minutes</strong></div>
+
+    <div class="hiw-time-compare">
+      <div class="htc-before">😫 Before Postra: <strong>2+ hours per reel</strong></div>
+      <div class="htc-arrow">→</div>
+      <div class="htc-after">🚀 With Postra: <strong>under 10 minutes, start to published</strong></div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+      <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-primary btn-lg btn-glow">
+        🚀 Try the Full Workflow Free
+      </a>
+      <p style="font-size:13px;color:var(--ink-3);margin-top:12px;">No signup needed to start. Free plan available.</p>
     </div>
   </section>
 
   <!-- ===== FEATURES ===== -->
   <section class="section features-section">
     <p class="label" style="display:block;text-align:center;">Features</p>
-    <h2 class="section-title" style="text-align:center;margin-bottom:8px;">Everything a creator needs. Nothing they don't.</h2>
-    <p class="section-subtitle" style="text-align:center;margin:0 auto 56px;">Every feature is built around one goal: helping you post consistently, without burning out.</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:8px;">Every step of your content — handled.</h2>
+    <p class="section-subtitle" style="text-align:center;margin:0 auto 56px;">Postra isn't just an idea generator. It's the full workflow from blank screen to published reel.</p>
     <div class="grid-3">
       <div class="card card-hover">
         <div class="card-icon">💡</div>
-        <h3>Trending Idea Generator</h3>
-        <p>Apne niche ke liye 3–10 niche-specific ideas based on what's actually performing right now.</p>
-        <div class="card-tag">Most used</div>
+        <h3>Idea Generator</h3>
+        <p>10 niche-specific, trend-aware ideas on demand. Never open a blank camera roll again.</p>
+        <div class="card-tag">Step 1</div>
       </div>
-      <div class="card card-hover card-featured">
+      <div class="card card-hover">
         <div class="card-icon">🪝</div>
         <h3>AI Hook Builder</h3>
-        <p>Your first 3 seconds determine everything. Postra generates proven hook formats — 3 variations, one click.</p>
+        <p>3 scroll-stopping hook variations per idea. Your first 3 seconds make or break your reach — get them right.</p>
+        <div class="card-tag">Step 2</div>
+      </div>
+      <div class="card card-hover card-featured">
+        <div class="card-icon">📝</div>
+        <h3>Full Script Generator</h3>
+        <p>Scene-by-scene script matched to your niche and tone. Word for word — ready to record immediately.</p>
         <div class="card-tag card-tag-brand">🔥 Creator favourite</div>
       </div>
       <div class="card card-hover">
-        <div class="card-icon">📝</div>
-        <h3>Full Script Generator</h3>
-        <p>A complete, ready-to-record script — matched to your tone, niche, and content type. Word for word.</p>
+        <div class="card-icon">📸</div>
+        <h3>Shooting Guide</h3>
+        <p>Camera angles, lighting notes, scene direction. Know exactly what to film before you press record.</p>
+        <div class="card-tag">Step 4 — Pro</div>
       </div>
       <div class="card card-hover">
-        <div class="card-icon">✍️</div>
-        <h3>Auto Captions + Hashtags</h3>
-        <p>3 caption options, 5 targeted hashtags — generated, ready to copy. Editing optional.</p>
+        <div class="card-icon">✂️</div>
+        <h3>Editing Guide</h3>
+        <p>Transitions, pacing, music suggestions, and text overlay tips — matched to your content type. No editing experience needed.</p>
+        <div class="card-tag">Step 5 — Pro</div>
       </div>
       <div class="card card-hover">
-        <div class="card-icon">⏰</div>
-        <h3>Smart Scheduling</h3>
-        <p>Postra suggests the best time to post based on your audience activity. One click to schedule.</p>
+        <div class="card-icon">🚀</div>
+        <h3>Direct Instagram Publishing</h3>
+        <p>Post or schedule directly through the official Instagram API. One click from finished reel to published.</p>
+        <div class="card-tag">Step 7 — Starter+</div>
       </div>
-      <div class="card card-hover">
-        <div class="card-icon">📅</div>
-        <h3>Content Calendar</h3>
-        <p>Map out your content like a pro. Schedule posts, track consistency, and never miss a posting day again.</p>
-      </div>
+    </div>
   </section>
 
   <!-- ===== BEFORE / AFTER ===== -->
   <section class="section ba-section">
     <div style="text-align:center;margin-bottom:48px;">
       <p class="label">Before vs After</p>
-      <h2 class="section-title">This is what changes with Postra.</h2>
+      <h2 class="section-title">This is what changes when you have a system.</h2>
     </div>
     <div class="ba-grid">
       <div class="ba-card ba-before">
-        <h3>😮‍💨 Postra ke bina</h3>
-        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">You open the camera, stare blankly, and close the app. Nothing posted.</div></div>
-        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Two hours on one caption — and it still felt off.</div></div>
-        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Ek post karke 3 weeks quiet. Algorithm ne ignore kiya.</div></div>
-        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Motivation khatam, quit ho gaye. Again.</div></div>
-        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Har baar from scratch. Zero system. Maximum stress.</div></div>
+        <h3>😮‍💨 Without Postra</h3>
+        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">You open the camera, stare blankly, and close the app. Nothing filmed.</div></div>
+        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Two hours on one post — writing, rewriting, second-guessing every word.</div></div>
+        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">You filmed something but it looks amateurish. No shoot plan, no direction.</div></div>
+        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">One post, then 3 weeks of silence. The algorithm forgets you exist.</div></div>
+        <div class="ba-item"><div class="ba-icon">❌</div><div class="ba-text">Every post starts from scratch. Maximum effort, minimum system.</div></div>
       </div>
       <div class="ba-card ba-after">
-        <h3>🚀 Postra ke saath</h3>
-        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Open Postra — 3 ready ideas waiting for you immediately.</div></div>
-        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Script, caption, hashtags — done in under 5 minutes.</div></div>
-        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">3–5 posts per week, effortlessly. Streak never breaks.</div></div>
-        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Workflows save automatically. Every post gets easier than the last.</div></div>
-        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Actually grow — because you actually show up.</div></div>
+        <h3>🚀 With Postra</h3>
+        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Open Postra — idea, hook, script, and shoot plan waiting for you in minutes.</div></div>
+        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">Full workflow done in under 10 minutes. Post quality goes up, effort goes down.</div></div>
+        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">You film with a shooting guide. Every shot intentional, every scene planned.</div></div>
+        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">3–5 posts per week, effortlessly. Streak never breaks. Algorithm rewards you.</div></div>
+        <div class="ba-item"><div class="ba-icon">✅</div><div class="ba-text">You publish directly from Postra. No more copy-pasting across apps.</div></div>
       </div>
     </div>
   </section>
@@ -383,12 +468,12 @@
   <!-- ===== SOCIAL PROOF ===== -->
   <section class="section proof-section">
     <p class="label" style="display:block;text-align:center;">Real Creators, Real Results</p>
-    <h2 class="section-title" style="text-align:center;margin-bottom:8px;">Consistent posting finally feels normal.</h2>
-    <p class="section-subtitle" style="text-align:center;margin:0 auto 48px;">What used to feel overwhelming is now just routine.</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:8px;">Posting consistently finally feels normal.</h2>
+    <p class="section-subtitle" style="text-align:center;margin:0 auto 48px;">What used to feel like a production now takes under 10 minutes.</p>
     <div class="grid-3">
       <div class="testimonial testimonial-hover">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"I stopped dreading Sunday evenings. Now I batch 4 posts in under an hour. Postra gave me my evenings backye literally."</p>
+        <p class="testimonial-text">"The shooting guide changed everything for me. I used to film for 2 hours and still feel uncertain. Now I walk in with a plan and come out with usable footage every single time."</p>
         <div class="testimonial-author">
           <div class="t-avatar">SP</div>
           <div><div class="t-name">Sakshi Prajapati</div><div class="t-handle">@sakshiprajapati · 12.4K followers</div></div>
@@ -396,7 +481,7 @@
       </div>
       <div class="testimonial testimonial-hover testimonial-featured">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Script generator insane hai. 2 sentence describe I got a word-for-word reel script I actually used. Views tripled."</p>
+        <p class="testimonial-text">"I went from posting once a month to 4 times a week. The workflow is so clear — idea, script, shoot, publish. My views tripled in 6 weeks just from the consistency."</p>
         <div class="testimonial-author">
           <div class="t-avatar">SK</div>
           <div><div class="t-name">Shreya Kushwaha</div><div class="t-handle">@shreyakushwaha · 8.1K followers</div></div>
@@ -404,7 +489,7 @@
       </div>
       <div class="testimonial testimonial-hover">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"I quit content creation three times before Postra. It's the first tool that actually keeps me going — because the next step is always obvious."</p>
+        <p class="testimonial-text">"I quit content creation three times before Postra. It's the first tool where the next step is always obvious. The direct Instagram posting is a game-changer. I never open another app."</p>
         <div class="testimonial-author">
           <div class="t-avatar">AC</div>
           <div><div class="t-name">Atharv Chauhan</div><div class="t-handle">@atharvchauhan · 5.7K followers</div></div>
@@ -423,24 +508,24 @@
         <div class="ph-plan">
           <div class="ph-name">Free</div>
           <div class="ph-price">₹0<span>/forever</span></div>
-          <div class="ph-desc">3 ideas/day · Captions · Hooks · Up to 15 posts</div>
+          <div class="ph-desc">Ideas, captions, hooks · Up to 15 posts</div>
         </div>
         <div class="ph-divider">→</div>
         <div class="ph-plan">
           <div class="ph-name">Starter</div>
           <div class="ph-price">₹199<span>/month</span></div>
-          <div class="ph-desc">Scripts · Direct posting · Unlimited ideas · 30 posts</div>
+          <div class="ph-desc">Scripts · Direct publishing · Unlimited ideas</div>
         </div>
         <div class="ph-divider">→</div>
         <div class="ph-plan ph-plan-featured">
           <div class="ph-badge">Most Popular</div>
           <div class="ph-name">Pro</div>
           <div class="ph-price">₹399<span>/month</span></div>
-          <div class="ph-desc">Full workflow · Cover image gen · Always powerful AI</div>
+          <div class="ph-desc">Full workflow · Shoot & edit guides · One-click publish</div>
         </div>
       </div>
       <p class="pricing-note-small">💡 One good reel earns more than this plan costs.</p>
-      <a onclick="showPage('pricing')" class="btn btn-outline" style="margin-top:16px;">View full pricing→</a>
+      <a onclick="showPage('pricing')" class="btn btn-outline" style="margin-top:16px;">View full pricing →</a>
     </div>
   </section>
 
@@ -451,23 +536,23 @@
     <div style="max-width:680px; margin:0 auto;" id="faq">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Kya Postra free hai? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes — 14-day free trial, no credit card required. Get full access to all features and see how it fits your workflow. Upgrade anytime.</div>
+        <div class="faq-a">Yes — free plan available, no credit card required. You get idea generation, captions, and hooks. Upgrade to Starter for scripts and direct publishing, or Pro for the full workflow including shooting and editing guides.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Can Postra post directly to Instagram? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes. Connect your Instagram account and Postra can post or schedule directly through the official Instagram API. Your account stays completely secure.</div>
+        <div class="faq-a">Yes. Connect your Instagram account and Postra can post or schedule directly through the official Instagram API. Your credentials stay completely secure — we only use the permissions you explicitly grant.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What does the shooting guide actually include? <span class="faq-icon">+</span></button>
+        <div class="faq-a">For each reel, Postra breaks your script into scenes and tells you: the camera angle, lighting setup, movement tips, and framing for each shot. It also suggests what type of B-roll to capture. You'll walk into filming knowing exactly what you need.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I'm a complete beginner — is this for me? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Postra was literally built for beginners. No filming experience, no editing experience, no script-writing background needed. Every step guides you. The shooting guide assumes you have a phone — nothing else.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">My niche is very specific — will Postra understand it? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Absolutely. Give Postra your exact niche — fitness, food, finance, travel, study, tech, fashion, anything. Ideas are customised to your space, not generic templates.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">I'm a complete beginner. Can I still use it? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Postra literally bebuilt for beginners. No technical knowledge needed. Don't know what a script is? No problem — Postra guides you through every step.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How does pricing work for India? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Postra automatically detects your location and shows INR pricing. Plans start at ₹199/month — designed to be accessible for student and early-stage creators. Yearly plans save you 2 months.</div>
+        <div class="faq-a">Absolutely. Give Postra your exact niche — fitness, food, finance, travel, study, tech, fashion, anything. Ideas, scripts, and captions are all customised to your specific space, not generic templates.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Refund policy kya hai? <span class="faq-icon">+</span></button>
@@ -478,18 +563,18 @@
 
   <!-- ===== FINAL CTA ===== -->
   <div class="cta-band cta-band-upgraded">
-    <div class="cta-badge">🔥 2,000+ creators already posting</div>
-    <h2>Your next post is waiting.</h2>
-    <p>Stop staring at the blank screen. Enter your niche — Postra handles the rest.</p>
+    <div class="cta-badge">🚀 2,000+ creators already publishing with Postra</div>
+    <h2>Stop managing content manually.</h2>
+    <p>Turn your next reel idea into a published post — with a full workflow, in under 10 minutes.</p>
     <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-white btn-lg btn-cta-final">
-      ✨ Generate 3 Free Ideas — Now
+      🚀 Start Your First Reel Free
     </a>
     <div class="cta-microtrust">
       <span>🔒 No card required</span>
       <span>·</span>
-      <span>⚡ Instant output</span>
+      <span>📲 Publishes to Instagram</span>
       <span>·</span>
-      <span>🚫 No spam</span>
+      <span>⚡ Full workflow in minutes</span>
     </div>
   </div>
 
@@ -507,7 +592,6 @@
   </div>
 
   <section class="section">
-    <!-- India pricing -->
     <div id="india-pricing">
       <div class="pricing-grid pricing-grid-3">
 
@@ -530,7 +614,7 @@
         <div class="price-card">
           <div class="price-tier">Starter</div>
           <div class="price-amount">₹199</div><span class="price-period">/month</span>
-          <p class="price-desc">For creators who want to actually post consistently.</p>
+          <p class="price-desc">For creators who want to post consistently and stop doing it manually.</p>
           <ul class="price-features">
             <li><span class="check">✓</span> Everything in Free</li>
             <li><span class="check">✓</span> Script generation</li>
@@ -548,13 +632,14 @@
         <div class="price-card featured">
           <div class="price-tier">Pro</div>
           <div class="price-amount">₹399</div><span class="price-period">/month</span>
-          <p class="price-desc">For creators who want speed, quality, and full workflow support.</p>
+          <p class="price-desc">The full end-to-end workflow — from idea to published reel.</p>
           <ul class="price-features">
             <li><span class="check">✓</span> Everything in Starter</li>
-            <li><span class="check">✓</span> Shooting &amp; editing guide</li>
+            <li><span class="check">✓</span> Shooting guide (camera, angles, scenes)</li>
+            <li><span class="check">✓</span> Editing guide (transitions, pacing, music)</li>
             <li><span class="check">✓</span> Cover image generation</li>
-            <li><span class="check">✓</span> Always powerful output</li>
-            <li><span class="check">✓</span> One-click idea to post</li>
+            <li><span class="check">✓</span> Always powerful AI output</li>
+            <li><span class="check">✓</span> One-click idea to published reel</li>
             <li><span class="check">✓</span> Smart calendar + consistency tracking</li>
             <li><span class="check">✓</span> Schedule up to 5 posts/reels</li>
           </ul>
@@ -563,8 +648,6 @@
 
       </div>
     </div>
-
-
 
     <div class="pricing-note" style="margin-top:24px;">
       💡 <strong>One good reel earns more than the Starter plan costs.</strong>
@@ -595,9 +678,10 @@
           <tr><td>Best time to post AI</td><td>—</td><td>✓</td><td class="col-pro">✓</td></tr>
           <tr><td>Scheduled reels/posts</td><td>—</td><td>Up to 3</td><td class="col-pro">Up to 5</td></tr>
           <tr><td>Powerful AI regeneration</td><td>—</td><td>1 per session</td><td class="col-pro">Always on</td></tr>
-          <tr><td>Shooting &amp; editing guide</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
+          <tr><td>Shooting guide</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
+          <tr><td>Editing guide</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
           <tr><td>Cover image generation</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
-          <tr><td>One-click idea to post</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
+          <tr><td>One-click idea to published reel</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
           <tr><td>Smart calendar + tracking</td><td>—</td><td>—</td><td class="col-pro">✓</td></tr>
         </tbody>
       </table>
@@ -628,19 +712,19 @@
       <h2 style="font-size:28px; font-weight:800; margin-bottom:16px;">Postra didn't start as a startup idea.</h2>
       <p style="font-size:17px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;">It started out of frustration.</p>
       <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;">Over the past 2–3 years, I kept trying to create content. Every time it started with motivation — and ended the same way.</p>
-      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;"><strong>No ideas. No consistency. And eventually — quitting.</strong></p>
-      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;">The problem wasn't effort. It was what to post, how to post, and staying consistent while managing studies.</p>
-      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:32px;">Then I realised it wasn't just me. Almost every creator around me struggled with the same thing. People don't quit because they're lazy — they quit because the process is overwhelmingming hoti hai. Mentally exhausting hoti hai.</p>
+      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;"><strong>No ideas. No system. No consistency. And eventually — quitting.</strong></p>
+      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:20px;">The problem wasn't effort. It was the entire workflow. What to post, how to film it, how to edit it, where to publish it — every step was a separate battle with no system connecting them.</p>
+      <p style="font-size:16px; color:var(--ink-2); line-height:1.8; margin-bottom:32px;">Then I realised it wasn't just me. People don't quit because they're lazy — they quit because the process is overwhelming. Postra exists to fix the entire process, not just one piece of it.</p>
 
       <div style="background:var(--brand-light); border-left:4px solid var(--brand); border-radius:0 12px 12px 0; padding:24px 28px; margin-bottom:40px;">
-        <p style="font-size:18px; font-style:italic; color:var(--brand-dark); line-height:1.7; margin:0;">"Content creation so simple and guided that quitting becomes harder than continuing."</p>
+        <p style="font-size:18px; font-style:italic; color:var(--brand-dark); line-height:1.7; margin:0;">"Content creation so guided and simple that quitting becomes harder than continuing."</p>
         <p style="font-size:14px; color:var(--ink-3); margin-top:12px; margin-bottom:0;">— The reason Postra exists</p>
       </div>
 
       <h3 style="font-size:22px; font-weight:800; margin-bottom:16px;">What Postra stands for</h3>
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
+        <div style="display:flex; align-items:center; gap:12px; font-size:16px; font-weight:600;"><span style="color:var(--brand); font-size:20px;">→</span> Workflow over willpower</div>
         <div style="display:flex; align-items:center; gap:12px; font-size:16px; font-weight:600;"><span style="color:var(--brand); font-size:20px;">→</span> Consistency over motivation</div>
-        <div style="display:flex; align-items:center; gap:12px; font-size:16px; font-weight:600;"><span style="color:var(--brand); font-size:20px;">→</span> Simplicity over complexity</div>
         <div style="display:flex; align-items:center; gap:12px; font-size:16px; font-weight:600;"><span style="color:var(--brand); font-size:20px;">→</span> Execution over overthinking</div>
       </div>
 
@@ -649,8 +733,8 @@
         <div>
           <h3 style="font-size:24px; font-weight:800; margin-bottom:4px;">Parth Sharma</h3>
           <p style="color:var(--brand); font-weight:600; margin-bottom:16px;">Founder, Postra</p>
-          <p style="font-size:15px; color:var(--ink-2); line-height:1.75; margin-bottom:16px;">I'm 17. Still a student. Building this while managing studies — just like you. This wasn't built by some big company that "studied creators." It was built by someone who failed at content multiple times, felt the frustration, and decided to fix it.</p>
-          <p style="font-size:15px; color:var(--ink-2); line-height:1.75;">Haan — ek profitable business banana chahta hun. But ek real problem solve karna bhi chahta hun. If Postra helps thousands of creators stay consistent… that's a win bigger than money.</p>
+          <p style="font-size:15px; color:var(--ink-2); line-height:1.75; margin-bottom:16px;">I'm 17. Still a student. Building this while managing studies — just like you. This wasn't built by some big company that "studied creators." It was built by someone who failed at content multiple times, felt the frustration, and decided to fix the whole workflow.</p>
+          <p style="font-size:15px; color:var(--ink-2); line-height:1.75;">If Postra helps thousands of creators stay consistent and actually grow… that's a win bigger than money.</p>
         </div>
       </div>
     </div>
@@ -664,17 +748,17 @@
 <div class="page" id="page-features">
   <div class="page-hero">
     <p class="label">Features</p>
-    <h1>Every feature has one job.</h1>
-    <p>Remove friction. From the moment you have an idea to the moment you hit post — Postra keeps you moving forward hai.</p>
+    <h1>Every step of your reel — handled.</h1>
+    <p>From the moment you have an idea to the moment you hit publish — Postra keeps you moving forward without the friction.</p>
   </div>
 
   <section class="section">
     <div class="feature-row">
       <div>
-        <p class="label">Idea Generation</p>
+        <p class="label">Step 1 — Idea Generation</p>
         <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Never stare at a blank screen again.</h2>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra analyses your niche, your past content, and current trends to generate 3 relevant ideas on demand. Each idea is specific — not generic. You'll see ideas you'd actually want to make.</p>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Don't like them? Regenerate. Love one? Select it and move to hooks instantly. Want to save the others? They go straight to your idea bank.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra analyses your niche and current trends to generate 10 relevant ideas on demand. Each one is niche-specific — not generic filler. You'll see ideas you'd actually want to make.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Don't like them? Regenerate instantly. Love one? Select it and move to hooks in one click.</p>
         <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;">
           <span class="tag tag-blue">Niche-specific</span>
           <span class="tag tag-blue">Trend-aware</span>
@@ -684,8 +768,8 @@
       </div>
       <div class="feature-visual">
         <div class="mock-ui">
-          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">✨ Trending ideas for you</div>
-          <div style="background:var(--brand-light); border-radius:8px; padding:12px; margin-bottom:8px; font-size:13px;"><strong>Idea 1:</strong> "3 mistakes every beginner makes in the gym" → Reel format, high share potential</div>
+          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">✨ Ideas for your niche</div>
+          <div style="background:var(--brand-light); border-radius:8px; padding:12px; margin-bottom:8px; font-size:13px;"><strong>Idea 1:</strong> "3 mistakes every beginner makes in the gym" → Reel, high share potential</div>
           <div style="background:var(--surface-3); border-radius:8px; padding:12px; margin-bottom:8px; font-size:13px;"><strong>Idea 2:</strong> "This one change made my workouts 2x more effective" → Hook-driven, educational</div>
           <div style="background:var(--surface-3); border-radius:8px; padding:12px; font-size:13px;"><strong>Idea 3:</strong> "My honest review of 5 gym apps" → Carousel, trust-building</div>
           <div style="margin-top:12px; display:flex; gap:8px;">
@@ -698,10 +782,10 @@
 
     <div class="feature-row reverse">
       <div>
-        <p class="label">Hook + Script System</p>
+        <p class="label">Step 2–3 — Hook + Script System</p>
         <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Your first 3 seconds determine everything.</h2>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra generates 3 distinct hook variations for every idea — question-style, bold statement, or story-opener. Each one is built around proven scroll-stopping formats.</p>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Choose a hook, and Postra writes the full script — matched to your tone (professional, casual, energetic) and your niche. Read it, tweak it, or use it word for word.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra generates 3 hook variations for every idea — question-style, bold statement, or story-opener. Each one built around proven scroll-stopping formats.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Choose a hook, and Postra writes the full script — scene by scene, matched to your tone and niche. Read it, tweak it, or use it word for word.</p>
         <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;">
           <span class="tag tag-blue">3 hook styles</span>
           <span class="tag tag-blue">Tone-matched scripts</span>
@@ -713,42 +797,60 @@
           <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">🪝 Choose your hook</div>
           <div style="background:var(--brand-light); border:1.5px solid var(--brand); border-radius:8px; padding:12px; margin-bottom:8px; font-size:13px;"><strong>Hook A:</strong> "Most people never see results because they skip this one step…"</div>
           <div style="background:var(--surface-3); border-radius:8px; padding:12px; margin-bottom:8px; font-size:13px;"><strong>Hook B:</strong> "I started with zero knowledge. Here's what actually worked for me."</div>
-          <div style="background:var(--surface-3); border-radius:8px; padding:12px; font-size:13px;"><strong>Hook C:</strong> "Stop doing this if you want to see real progress."</div>
+          <div style="background:var(--surface-3); border-radius:8px; padding:12px; font-size:13px;"><strong>Hook C:</strong> "Stop doing this if you want real progress."</div>
         </div>
       </div>
     </div>
 
     <div class="feature-row">
       <div>
-        <p class="label">Shoot & Edit Guidance</p>
-        <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">A creative director in your pocket.</h2>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Most creators know what to say but not how to film it. Postra breaks your script into scenes and tells you exactly how to shoot each one — camera angle, movement, background suggestions.</p>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">After filming, Postra suggests editing effects, transitions, pacing, and music — based on your content type and vibe. No editing experience required.</p>
+        <p class="label">Step 4 — Shooting Guide <span class="tag tag-blue" style="margin-left:4px; font-size:11px;">Pro</span></p>
+        <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Walk into filming knowing exactly what to shoot.</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Most creators know what to say — they just don't know how to film it. Postra breaks your script into scenes and tells you exactly: camera angle, movement, framing, and background for each shot.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">No more filming for 2 hours and ending up with unusable footage. Every shot is intentional.</p>
       </div>
       <div class="feature-visual">
         <div class="mock-ui">
-          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">🎬 Scene guidance</div>
-          <div style="margin-bottom:10px; font-size:13px; color:var(--ink-2);"><strong>Scene 1:</strong> Face-to-camera, natural lighting, slight low angle. Hook directly bolo.</div>
-          <div style="margin-bottom:10px; font-size:13px; color:var(--ink-2);"><strong>Scene 2:</strong> B-roll of gym. Quick cuts, 0.5s each. Trending audio underneath.</div>
-          <div style="font-size:13px; color:var(--ink-2);"><strong>Scene 3:</strong> CTA closeup — look into camera, speak slowly. End with a smirk.</div>
-          <div style="margin-top:12px; background:var(--success-light); border-radius:8px; padding:10px; font-size:12px; color:var(--success);">✨ Suggested music: lo-fi trap beat, 95 BPM</div>
+          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">📸 Shooting guide</div>
+          <div style="margin-bottom:10px; font-size:13px; color:var(--ink-2);"><strong>Scene 1:</strong> Face-to-camera, window light, slight low angle. Speak directly into the lens.</div>
+          <div style="margin-bottom:10px; font-size:13px; color:var(--ink-2);"><strong>Scene 2:</strong> B-roll of gym. Quick 0.5s cuts. Slow pan. No shaky cam.</div>
+          <div style="font-size:13px; color:var(--ink-2);"><strong>Scene 3:</strong> CTA closeup — zoom in slightly, look into camera, speak slowly.</div>
+          <div style="margin-top:12px; background:var(--brand-light); border-radius:8px; padding:10px; font-size:12px; color:var(--brand);">📲 All scenes linked directly to your script</div>
         </div>
       </div>
     </div>
 
     <div class="feature-row reverse">
       <div>
-        <p class="label">Captions, Hashtags & Scheduling</p>
-        <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Post-ready in under a minute.</h2>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">After you upload your content, Postra generates 3 caption variations — short, medium, and long-form. Each written in your brand voice. Pick one, edit it, or regenerate.</p>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">Add up to 5 targeted hashtags, pick your cover, add music, and either post immediately or schedule for the optimal time Postra recommends.</p>
+        <p class="label">Step 5 — Editing Guide <span class="tag tag-blue" style="margin-left:4px; font-size:11px;">Pro</span></p>
+        <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">Edit your reel with direction, not guesswork.</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">After filming, Postra suggests transitions, pacing, music, and text overlay placement — matched to your content type and vibe. Beginner-friendly, no editing experience needed.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">Know exactly what to cut, when to cut, and what music sets the right tone.</p>
       </div>
       <div class="feature-visual">
         <div class="mock-ui">
-          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">✍️ Caption options</div>
-          <div style="background:var(--surface-3); border-radius:8px; padding:10px; margin-bottom:8px; font-size:12px; color:var(--ink-2);">Short: "Ye ek habit ne sab badal diya. 🔥 #fitness #growthmindset"</div>
-          <div style="background:var(--brand-light); border:1.5px solid var(--brand); border-radius:8px; padding:10px; margin-bottom:8px; font-size:12px; color:var(--ink-2);">Medium: "Took me 2 years to figure this out — sharing it so you don't waste time. Drop a 🙋 if this helped. #fitnesshacks #reels"</div>
-          <div style="margin-top:12px; font-size:12px; color:var(--ink-3);">⏰ Best time to post: <strong style="color:var(--ink);">Tuesday 6:30 PM IST</strong></div>
+          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">✂️ Editing guide</div>
+          <div style="margin-bottom:8px; font-size:13px; color:var(--ink-2);"><strong>Pacing:</strong> Fast cuts (0.3–0.5s) on Points 1–3. Slow down on the CTA.</div>
+          <div style="margin-bottom:8px; font-size:13px; color:var(--ink-2);"><strong>Transitions:</strong> Jump cuts. No wipes or dissolves — keep it clean.</div>
+          <div style="margin-bottom:8px; font-size:13px; color:var(--ink-2);"><strong>Text overlays:</strong> Show each mistake as text on screen, timed to your words.</div>
+          <div style="margin-top:12px; background:var(--success-light); border-radius:8px; padding:10px; font-size:12px; color:var(--success);">✨ Music: lo-fi trap beat, 95 BPM — matches your pacing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div>
+        <p class="label">Step 6–7 — Caption, Hashtags & Publishing</p>
+        <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">From finished reel to posted — in under a minute.</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra generates 3 caption variations — short, medium, and long-form. Written in your voice. Pick one, edit it, or regenerate.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">Add hashtags, pick your cover, and post directly to Instagram or schedule for the optimal time Postra recommends. No copy-pasting, no switching apps.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="mock-ui">
+          <div style="font-size:13px; font-weight:700; color:var(--ink-3); margin-bottom:12px;">🚀 Ready to publish</div>
+          <div style="background:var(--brand-light); border:1.5px solid var(--brand); border-radius:8px; padding:10px; margin-bottom:8px; font-size:12px; color:var(--ink-2);">Caption: "Took me 2 years to figure this out — sharing so you don't waste time. Drop a 🙋 if this helped. #fitnesshacks #reels"</div>
+          <div style="font-size:12px; color:var(--ink-3); margin-bottom:12px;">⏰ Best time to post: <strong style="color:var(--ink);">Tuesday 6:30 PM IST</strong></div>
+          <button class="btn btn-primary" style="width:100%; padding:10px; font-size:13px; justify-content:center;">📲 Post to Instagram Now →</button>
         </div>
       </div>
     </div>
@@ -756,7 +858,7 @@
 
   <div class="cta-band">
     <h2>See it for yourself.</h2>
-    <p>Start your first post with Postra right now — no credit card needed.</p>
+    <p>Start your first full reel workflow with Postra right now — no credit card needed.</p>
     <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-white btn-lg">Start Free →</a>
   </div>
 </div><!-- /page-features -->
@@ -1001,7 +1103,7 @@
       </div>
       <div class="card">
         <h3 style="margin-bottom:16px;">About Postra</h3>
-        <p style="color:var(--ink-3);">Postra is a SaaS platform that helps creators save time, stay consistent, and grow faster with smarter AI-powered tools.</p>
+        <p style="color:var(--ink-3);">Postra is a SaaS platform that gives Instagram creators a complete end-to-end workflow — from idea to published reel — so they can post consistently without the mental load.</p>
       </div>
     </div>
   </section>
@@ -1032,12 +1134,12 @@
         <div class="dash-header">
           <div>
             <div style="font-size:20px; font-weight:800; font-family:'Syne',sans-serif;">Good afternoon, Parth 👋</div>
-            <div style="font-size:14px; color:var(--ink-3);">You have 2 posts scheduled this week.</div>
+            <div style="font-size:14px; color:var(--ink-3);">You have 2 reels scheduled this week.</div>
           </div>
-          <button class="btn btn-primary" style="padding:10px 20px; font-size:14px;">+ New Post</button>
+          <button class="btn btn-primary" style="padding:10px 20px; font-size:14px;">+ New Reel</button>
         </div>
         <div class="dash-stats">
-          <div class="dash-stat"><div class="dash-stat-val">12</div><div class="dash-stat-label">Posts this month</div></div>
+          <div class="dash-stat"><div class="dash-stat-val">12</div><div class="dash-stat-label">Reels published</div></div>
           <div class="dash-stat"><div class="dash-stat-val">5</div><div class="dash-stat-label">Saved workflows</div></div>
           <div class="dash-stat"><div class="dash-stat-val">8</div><div class="dash-stat-label">Ideas saved</div></div>
         </div>
@@ -1048,7 +1150,7 @@
               <div class="draft-icon">🏋️</div>
               <div class="draft-info">
                 <div class="draft-title">Gym routine — 3 mistakes</div>
-                <div class="draft-meta">Reel · Script ready</div>
+                <div class="draft-meta">Reel · Script + Shoot guide ready</div>
               </div>
               <div class="draft-status status-draft">Draft</div>
             </div>
@@ -1095,7 +1197,7 @@
   </section>
   <div class="cta-band">
     <h2>Ready to take control of your content?</h2>
-    <p>Start your Postra account and post your first AI-assisted reel today.</p>
+    <p>Start your Postra account and publish your first AI-assisted reel today.</p>
     <a onclick="window.location.href='https://postra-five.vercel.app/'" class="btn btn-white btn-lg">Get Started Free →</a>
   </div>
 </div><!-- /page-dashboard -->
@@ -1111,7 +1213,7 @@
         <img src="assets/postra.png" alt="" style="height:44px;width:auto;filter:brightness(0) invert(1) opacity(0.9);">
         <span>Postra</span>
       </div>
-      <p class="footer-tagline">The AI-powered content system for Instagram creators. Go from idea to post — without the overwhelm.</p>
+      <p class="footer-tagline">The AI-powered content workflow for Instagram creators. From idea to published reel — without the overwhelm.</p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
         <a href="https://instagram.com/buildwithprth" target="_blank" style="color:#94a3b8; font-size:22px; text-decoration:none;" title="@buildwithprth"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://mail.google.com/mail/?view=cm&to=sharmaaparth.07@email.com&su=Business Inquiry - Postra&body=Hi Postra Support, ." target="_blank" style="color:#94a3b8; font-size:22px; text-decoration:none;" title="sharmaaparth.07@gmail.com"><i class="fa-regular fa-envelope"></i></a>
@@ -1149,14 +1251,11 @@
 <!-- ====================================================
      FEEDBACK WIDGET — floating bottom-right
 ===================================================== -->
-
-<!-- Trigger button -->
 <button class="fb-trigger" id="fbTrigger" onclick="toggleFeedback()" title="Share feedback or suggestion">
   <span class="fb-trigger-icon">💬</span>
   <span class="fb-trigger-label">Feedback</span>
 </button>
 
-<!-- Widget panel -->
 <div class="fb-panel" id="fbPanel">
   <div class="fb-panel-header">
     <div class="fb-header-left">
@@ -1169,13 +1268,11 @@
     <button class="fb-close" onclick="toggleFeedback()" title="Close">✕</button>
   </div>
 
-  <!-- Prompt text -->
   <div class="fb-prompt">
     <p>Something caught your eye? Have a suggestion?<br>
     <strong>Tell me directly — text or voice.</strong></p>
   </div>
 
-  <!-- Mode selector -->
   <div class="fb-modes" id="fbModes">
     <button class="fb-mode-btn active" id="modeTextBtn" onclick="switchMode('text')">
       ✍️ Write
@@ -1185,23 +1282,14 @@
     </button>
   </div>
 
-  <!-- TEXT mode -->
   <div class="fb-body" id="fbTextBody">
-    <textarea
-      id="fbTextarea"
-      class="fb-textarea"
-      placeholder="e.g. The pricing section felt confusing, or I loved the output preview demo..."
-      rows="4"
-    ></textarea>
+    <textarea id="fbTextarea" class="fb-textarea" placeholder="e.g. The pricing section felt confusing, or I loved the workflow demo..." rows="4"></textarea>
     <div class="fb-actions">
       <input type="email" id="fbEmail" class="fb-email" placeholder="Your email (optional)">
-      <button class="btn btn-primary fb-submit-btn" onclick="submitFeedback()">
-        Send →
-      </button>
+      <button class="btn btn-primary fb-submit-btn" onclick="submitFeedback()">Send →</button>
     </div>
   </div>
 
-  <!-- VOICE mode -->
   <div class="fb-body" id="fbVoiceBody" style="display:none;">
     <div class="fb-voice-area" id="fbVoiceArea">
       <div class="fb-voice-idle" id="fbVoiceIdle">
@@ -1231,17 +1319,14 @@
     </div>
   </div>
 
-  <!-- Success state -->
   <div class="fb-success" id="fbSuccess" style="display:none;">
     <div class="fb-success-icon">🙏</div>
     <h4>Thank you!</h4>
     <p>Got your message. I read every single one and use them to make Postra better.</p>
     <p class="fb-success-sig">— Parth</p>
   </div>
-
 </div>
 
-<!-- Dark overlay on mobile -->
 <div class="fb-overlay" id="fbOverlay" onclick="toggleFeedback()"></div>
 
 </body>
