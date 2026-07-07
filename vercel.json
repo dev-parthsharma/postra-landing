@@ -1,7 +1,44 @@
 {
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "postra_session_active",
+          "value": "true"
+        }
+      ],
+      "destination": "https://app.postra.co.in/dashboard",
+      "statusCode": 307
+    }
+  ],
   "rewrites": [
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/terms&services", "destination": "/terms.html" },
     { "source": "/privacypolicy", "destination": "/privacypolicy.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/style.css",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/script.js",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
   ]
 }
