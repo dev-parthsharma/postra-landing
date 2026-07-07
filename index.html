@@ -12,17 +12,19 @@
   <meta property="og:description" content="Script → Shoot → Edit → Publish. Postra handles every step so you can post consistently without the mental load.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://postra-gamma.vercel.app/">
-  <meta property="og:image" content="https://postra-gamma.vercel.app/assets/postra.png">
+  <meta property="og:image" content="https://postra-landing.vercel.app/assets/postra.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Postra — From Idea to Published Reel in One Flow.">
   <meta name="twitter:description" content="Stop managing content manually. Postra gives you the full workflow — idea to Instagram — in minutes.">
-  <meta name="twitter:image" content="https://postra-gamma.vercel.app/assets/postra.png">
-  <link rel="icon" href="assets/postra.png" type="image/png">
+  <meta name="twitter:image" content="https://postra-landing.vercel.app/assets/postra.png">
+  <link rel="icon" href="https://postra-landing.vercel.app/assets/postra.png" type="image/png">
   <link rel="canonical" href="https://postra-gamma.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- Loaded Absolutely to Avoid Path Collisions -->
+  <link rel="stylesheet" href="https://postra-landing.vercel.app/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="theme-color" content="#000000">
 </head>
@@ -31,7 +33,7 @@
 <!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="nav-logo" onclick="showPage('home')" style="display:flex;align-items:center;gap:6px;cursor:pointer;">
-    <img src="assets/postra.png" alt="Postra logo" style="height:44px;width:auto;display:block;filter:invert(30%) sepia(90%) saturate(600%) hue-rotate(200deg) brightness(80%);">
+    <img src="https://postra-landing.vercel.app/assets/postra.png" alt="Postra logo" style="height:44px;width:auto;display:block;filter:invert(30%) sepia(90%) saturate(600%) hue-rotate(200deg) brightness(80%);">
     <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--brand);letter-spacing:-0.03em;">Postra</span>
   </div>
   <div class="nav-links" id="navLinks">
@@ -41,7 +43,7 @@
     <a onclick="showPage('about')" id="nav-about">About</a>
     <a onclick="showPage('blog')" id="nav-blog">Blog</a>
     <a onclick="showPage('contact')" id="nav-contact">Contact</a>
-    <a onclick="window.location.href='https://postra.co.in/'" class="nav-cta pulse-cta">Start Free →</a>
+    <a onclick="window.location.href='https://postra.co.in/signup'" class="nav-cta pulse-cta">Start Free →</a>
   </div>
   <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 </nav>
@@ -54,7 +56,7 @@
   <a onclick="showPage('about');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">About</a>
   <a onclick="showPage('blog');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Blog</a>
   <a onclick="showPage('contact');toggleMobileMenu()" style="display:block;padding:10px 0;font-weight:600;color:var(--ink);cursor:pointer;">Contact</a>
-  <a onclick="window.location.href='https://postra.co.in/';toggleMobileMenu()" style="display:block;margin-top:8px;padding:12px;text-align:center;background:var(--brand);color:#fff;border-radius:8px;font-weight:700;cursor:pointer;">Start Your First Reel Free →</a>
+  <a onclick="window.location.href='https://postra.co.in/signup';toggleMobileMenu()" style="display:block;margin-top:8px;padding:12px;text-align:center;background:var(--brand);color:#fff;border-radius:8px;font-weight:700;cursor:pointer;">Start Your First Reel Free →</a>
 </div>
 
 
@@ -85,7 +87,7 @@
       </p>
 
       <div class="hero-actions">
-        <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-primary btn-lg btn-glow">
+        <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-primary btn-lg btn-glow">
           <span>🚀</span> Start Your First Reel Free
         </a>
         <a onclick="showPage('features')" class="btn btn-outline btn-lg">See the Full Workflow →</a>
@@ -148,7 +150,7 @@
               <div class="script-scene-label">📣 Point 2 (12–22s)</div>
               <div class="script-scene-text">«Mistake two — skipping the warm-up. I got injured twice. Both were 100% avoidable.»</div>
             </div>
-            <div style="margin-top:8px;font-size:12px;color:var(--ink-3);">+ 2 more scenes included · 45-second reel · Conversational tone</div>
+            <div style="margin-top:8px;font-size:12px;color:var(--ink-3);="+ 2 more scenes included · 45-second reel · Conversational tone</div>
           </div>
 
           <div class="otab-content" id="tab-shoot">
@@ -192,7 +194,7 @@
         </div>
         <div class="output-footer">
           <span class="output-time">⚡ Full workflow in under 5 minutes · Publishes directly to Instagram</span>
-          <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Try it free →</a>
+          <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Try it free →</a>
         </div>
       </div>
     </div>
@@ -387,7 +389,7 @@
     </div>
 
     <div style="text-align:center; margin-top:48px;">
-      <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-primary btn-lg btn-glow">
+      <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-primary btn-lg btn-glow">
         🚀 Try the Full Workflow Free
       </a>
       <p style="font-size:13px;color:var(--ink-3);margin-top:12px;">No signup needed to start. Free plan available.</p>
@@ -514,7 +516,7 @@
         <div class="ph-plan">
           <div class="ph-name">Starter</div>
           <div class="ph-price">₹199<span>/month</span></div>
-          <div class="ph-desc">Scripts · Direct publishing · Unlimited ideas</div>
+          <div class="ph-desc">Ideas, captions, hooks · Up to 15 posts</div>
         </div>
         <div class="ph-divider">→</div>
         <div class="ph-plan ph-plan-featured">
@@ -566,7 +568,7 @@
     <div class="cta-badge">🚀 2,000+ creators already publishing with Postra</div>
     <h2>Stop managing content manually.</h2>
     <p>Turn your next reel idea into a published post — with a full workflow, in under 10 minutes.</p>
-    <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-white btn-lg btn-cta-final">
+    <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-white btn-lg btn-cta-final">
       🚀 Start Your First Reel Free
     </a>
     <div class="cta-microtrust">
@@ -607,7 +609,7 @@
             <li><span class="check">✓</span> Instagram integration</li>
             <li><span class="check">✓</span> Up to 15 post outputs</li>
           </ul>
-          <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-outline" style="width:100%;justify-content:center;">Start Free</a>
+          <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-outline" style="width:100%;justify-content:center;">Start Free</a>
         </div>
 
         <!-- STARTER -->
@@ -625,7 +627,7 @@
             <li><span class="check">✓</span> Schedule up to 3 reels</li>
             <li><span class="check">✓</span> Up to 30 post outputs</li>
           </ul>
-          <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-outline" style="width:100%;justify-content:center;">Upgrade to Starter</a>
+          <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-outline" style="width:100%;justify-content:center;">Upgrade to Starter</a>
         </div>
 
         <!-- PRO -->
@@ -643,7 +645,7 @@
             <li><span class="check">✓</span> Smart calendar + consistency tracking</li>
             <li><span class="check">✓</span> Schedule up to 5 posts/reels</li>
           </ul>
-          <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-primary" style="width:100%;justify-content:center;">Go Pro →</a>
+          <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-primary" style="width:100%;justify-content:center;">Go Pro →</a>
         </div>
 
       </div>
@@ -729,7 +731,7 @@
       </div>
 
       <div class="founder-card">
-        <img src="assets/founder.png" alt="Parth Sharma, Founder of Postra" style="width:160px;height:160px;flex-shrink:0;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--brand-light);">
+        <img src="https://postra-landing.vercel.app/assets/founder.png" alt="Parth Sharma, Founder of Postra" style="width:160px;height:160px;flex-shrink:0;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--brand-light);">
         <div>
           <h3 style="font-size:24px; font-weight:800; margin-bottom:4px;">Parth Sharma</h3>
           <p style="color:var(--brand); font-weight:600; margin-bottom:16px;">Founder, Postra</p>
@@ -843,7 +845,7 @@
         <p class="label">Step 6–7 — Caption, Hashtags & Publishing</p>
         <h2 style="font-size:28px; font-weight:800; margin-bottom:12px;">From finished reel to posted — in under a minute.</h2>
         <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Postra generates 3 caption variations — short, medium, and long-form. Written in your voice. Pick one, edit it, or regenerate.</p>
-        <p style="font-size:16px; color:var(--ink-2); line-height:1.75;">Add hashtags, pick your cover, and post directly to Instagram or schedule for the optimal time Postra recommends. No copy-pasting, no switching apps.</p>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin-bottom:20px;">Add hashtags, pick your cover, and post directly to Instagram or schedule for the optimal time Postra recommends. No copy-pasting, no switching apps.</p>
       </div>
       <div class="feature-visual">
         <div class="mock-ui">
@@ -859,7 +861,7 @@
   <div class="cta-band">
     <h2>See it for yourself.</h2>
     <p>Start your first full reel workflow with Postra right now — no credit card needed.</p>
-    <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-white btn-lg">Start Free →</a>
+    <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-white btn-lg">Start Free →</a>
   </div>
 </div><!-- /page-features -->
 
@@ -1198,7 +1200,7 @@
   <div class="cta-band">
     <h2>Ready to take control of your content?</h2>
     <p>Start your Postra account and publish your first AI-assisted reel today.</p>
-    <a onclick="window.location.href='https://postra.co.in/'" class="btn btn-white btn-lg">Get Started Free →</a>
+    <a onclick="window.location.href='https://postra.co.in/signup'" class="btn btn-white btn-lg">Get Started Free →</a>
   </div>
 </div><!-- /page-dashboard -->
 
@@ -1210,7 +1212,7 @@
   <div class="footer-top">
     <div>
       <div class="footer-brand" style="display:flex;align-items:center;gap:8px;">
-        <img src="assets/postra.png" alt="" style="height:44px;width:auto;filter:brightness(0) invert(1) opacity(0.9);">
+        <img src="https://postra-landing.vercel.app/assets/postra.png" alt="" style="height:44px;width:auto;filter:brightness(0) invert(1) opacity(0.9);">
         <span>Postra</span>
       </div>
       <p class="footer-tagline">The AI-powered content workflow for Instagram creators. From idea to published reel — without the overwhelm.</p>
@@ -1246,7 +1248,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="https://postra-landing.vercel.app/script.js"></script>
 
 <!-- ====================================================
      FEEDBACK WIDGET — floating bottom-right
@@ -1330,4 +1332,38 @@
 <div class="fb-overlay" id="fbOverlay" onclick="toggleFeedback()"></div>
 
 </body>
-</html>
+</html>--- START OF FILE Paste July 07, 2026 - 9:51AM ---
+
+// postra-landing/vercel.json
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      },
+      "continue": true
+    },
+    {
+      "src": "/style.css",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      },
+      "continue": true
+    },
+    {
+      "src": "/script.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
