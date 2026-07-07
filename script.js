@@ -354,3 +354,32 @@ function resetFeedbackPanel() {
     audioBlob = null;
   }, 300);
 }
+
+// ── Referral Query Parameter Forwarding ──
+// Automatically forwards '?ref=CODE' from landing page to the app subdomain
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const refCode = urlParams.get("ref") || urlParams.get("referral");
+
+  if (refCode) {
+    const cleanRef = refCode.trim().toUpperCase();
+    
+    // Store in landing localStorage as a backup
+    localStorage.setItem("postra_landing_ref", cleanRef);
+
+    // Find all elements with redirection onclick attributes
+    const elements = document.querySelectorAll("[onclick]");
+    elements.forEach(el => {
+      const originalOnclick = el.getAttribute("onclick") || "";
+      
+      // If the button points to the login page, append the referral code
+      if (originalOnclick.includes("postra.co.in/login")) {
+        const updatedOnclick = originalOnclick.replace(
+          "https://postra.co.in/login",
+          `https://app.postra.co.in/login?ref=${cleanRef}`
+        );
+        el.setAttribute("onclick", updatedOnclick);
+      }
+    });
+  }
+});
