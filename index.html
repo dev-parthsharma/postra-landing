@@ -1332,38 +1332,4 @@
 <div class="fb-overlay" id="fbOverlay" onclick="toggleFeedback()"></div>
 
 </body>
-</html>--- START OF FILE Paste July 07, 2026 - 9:51AM ---
-
-// postra-landing/vercel.json
-{
-  "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      },
-      "continue": true
-    },
-    {
-      "src": "/style.css",
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      },
-      "continue": true
-    },
-    {
-      "src": "/script.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      },
-      "continue": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
-}
+</html>
