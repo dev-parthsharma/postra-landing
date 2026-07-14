@@ -19,7 +19,8 @@
   "rewrites": [
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/terms&services", "destination": "/terms.html" },
-    { "source": "/privacypolicy", "destination": "/privacypolicy.html" }
+    { "source": "/privacypolicy", "destination": "/privacypolicy.html" },
+    { "source": "/data-deletion", "destination": "/data-deletion.html" }
   ],
   "headers": [
     {
